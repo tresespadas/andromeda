@@ -5,7 +5,7 @@ site_description: My personal blog built with MkDocs Material
 theme:
   name: material
   palette:
-    - scheme: default
+    - scheme: slate
       primary: indigo
       accent: indigo
   font:
@@ -30,6 +30,9 @@ nav:
       - Second Post: blog/second-post.md
   - SRI:
       - Conectividad entre máquinas: SRI/conectividad.md
+  - ASO:
+      - Pasos previos: ASO/pasos_previos.md
+      - Configuración LDAP: ASO/configuracion_ldap.md
 markdown_extensions:
   - admonition
   - codehilite
