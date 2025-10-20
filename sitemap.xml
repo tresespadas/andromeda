@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://andromeda.github.io/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/about/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/ASO/configuracion_ldap_cliente/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/ASO/configuracion_ldap_servidor/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/ASO/pasos_previos/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/SRI/conectividad/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/blog/first-post/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://andromeda.github.io/blog/second-post/</loc>
+         <lastmod>2025-10-20</lastmod>
+    </url>
+</urlset>
