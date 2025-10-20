@@ -32,7 +32,8 @@ nav:
       - Conectividad entre máquinas: SRI/conectividad.md
   - ASO:
       - Pasos previos: ASO/pasos_previos.md
-      - Configuración LDAP: ASO/configuracion_ldap.md
+      - Configuración LDAP Servidor: ASO/configuracion_ldap_servidor.md
+      - Configuración LDAP Cliente: ASO/configuracion_ldap_cliente.md
 markdown_extensions:
   - admonition
   - codehilite

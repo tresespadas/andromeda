@@ -25,3 +25,7 @@ network:
       addresses:
         - 192.168.104.10/24
 ```
+## Configurar la hora y zona horaria de Madrid
+```
+sudo timedatectl set-timezone "Europe/Madrid"
+```
