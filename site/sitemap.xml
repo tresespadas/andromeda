@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://yourusername.github.io/my-blog/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/about/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/ASO/configuracion_ldap_cliente/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/ASO/configuracion_ldap_servidor/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/ASO/pasos_previos/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/SRI/conectividad/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/blog/first-post/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+    <url>
+         <loc>https://yourusername.github.io/my-blog/blog/second-post/</loc>
+         <lastmod>2025-10-22</lastmod>
+    </url>
+</urlset>

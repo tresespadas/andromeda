@@ -30,15 +30,16 @@ sudo ldapsearch -xLLL -b "dc=iesguadalpena,dc=es" <condicion> <atributo-que-most
 ```
 sudo ldapdelete -x -W -D "cn=admin,dc=iesguadalpena,dc=es" <dn-que-borrar>
 ```
-## Fichero ejemplo: Unidad organizativa
+## Modificación de elementos en el directorio
 ```
-dn: ou=usuarios,dc=aula,dc=local
-objectClass: organizationalUnit
-ou: usuarios
-
-dn: ou=grupos,dc=aula,dc=local
-objectClass: organizationalUnit
-ou: grupos
+sudo ldapmodify -x -D "cn=admin,dc=iesguadalpena,dc=es" -W -f <fichero>.ldif
+```
+## Fichero ejemplo: Modificación
+```
+dn: cn=wwomang,ou=usuarios,dc=iesguadalpena,dc=es
+changetype: modify
+replace: mail
+mail: wwoman.garcia@g.educaand.es
 ```
 ## Editar archivo /etc/ldap/ldap.conf
 ```
