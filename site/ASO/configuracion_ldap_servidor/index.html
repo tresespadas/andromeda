@@ -1,0 +1,859 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="El blog de ASIR">
+      
+      
+        <meta name="author" content="Álvaro">
+      
+      
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/configuracion_ldap_servidor/">
+      
+      
+        <link rel="prev" href="../pasos_previos/">
+      
+      
+        <link rel="next" href="../configuracion_ldap_cliente/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Configuración LDAP Servidor - El blog de ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuracion-ldap-servidor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="El blog de ASIR" class="md-header__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El blog de ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuración LDAP Servidor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../SRI/conectividad/" class="md-tabs__link">
+          
+  
+  
+  SRI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../pasos_previos/" class="md-tabs__link">
+          
+  
+  
+  ASO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="El blog de ASIR" class="md-nav__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    El blog de ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SRI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SRI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SRI/conectividad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conectividad entre máquinas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ASO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ASO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pasos_previos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasos previos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuración LDAP Servidor
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración LDAP Servidor
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualización del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion-de-host-en-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de host en /etc/hosts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-software-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación del software LDAP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitar-servicio-al-encender-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar servicio al encender el servidor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-un-fichero-al-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir un fichero al directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-elementos-en-el-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrado-de-elementos-en-el-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrado de elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichero-ejemplo-unidad-organizativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero ejemplo: Unidad organizativa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editar-archivo-etcldapldapconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editar archivo /etc/ldap/ldap.conf
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion_ldap_cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración LDAP Cliente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualización del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion-de-host-en-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de host en /etc/hosts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-software-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación del software LDAP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitar-servicio-al-encender-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Habilitar servicio al encender el servidor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-un-fichero-al-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir un fichero al directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-elementos-en-el-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrado-de-elementos-en-el-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrado de elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichero-ejemplo-unidad-organizativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero ejemplo: Unidad organizativa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editar-archivo-etcldapldapconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editar archivo /etc/ldap/ldap.conf
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configuracion-ldap-servidor">Configuración LDAP Servidor<a class="headerlink" href="#configuracion-ldap-servidor" title="Permanent link">&para;</a></h1>
+<h2 id="actualizacion-del-sistema">Actualización del sistema<a class="headerlink" href="#actualizacion-del-sistema" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo apt update
+sudo apt dist-update
+</code></pre></div>
+
+<h2 id="resolucion-de-host-en-etchosts">Resolución de host en /etc/hosts<a class="headerlink" href="#resolucion-de-host-en-etchosts" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>#&lt;IP&gt; &lt;hostname&gt;.&lt;dominio&gt; &lt;hostname&gt;
+192.168.104.10 ldap-server.iesguadalpena.es ldap-server
+</code></pre></div>
+
+<h2 id="instalacion-del-software-ldap">Instalación del software LDAP<a class="headerlink" href="#instalacion-del-software-ldap" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo apt install slapd ldap-utils -y
+</code></pre></div>
+
+<h2 id="habilitar-servicio-al-encender-el-servidor">Habilitar servicio al encender el servidor<a class="headerlink" href="#habilitar-servicio-al-encender-el-servidor" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo systemctl enable slapd.service
+</code></pre></div>
+
+<h2 id="anadir-un-fichero-al-directorio">Añadir un fichero al directorio<a class="headerlink" href="#anadir-un-fichero-al-directorio" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo ldapadd -x -D cn=admin,dc=iesguadalpena,dc=es -W -f &lt;nombre-fichero&gt;.ldif
+</code></pre></div>
+
+<h2 id="buscar-elementos-en-el-directorio">Buscar elementos en el directorio<a class="headerlink" href="#buscar-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo ldapsearch -xLLL -b &quot;dc=iesguadalpena,dc=es&quot; &lt;condicion&gt; &lt;atributo-que-mostrar&gt;
+</code></pre></div>
+
+<h2 id="borrado-de-elementos-en-el-directorio">Borrado de elementos en el directorio<a class="headerlink" href="#borrado-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo ldapdelete -x -W -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; &lt;dn-que-borrar&gt;
+</code></pre></div>
+
+<h2 id="fichero-ejemplo-unidad-organizativa">Fichero ejemplo: Unidad organizativa<a class="headerlink" href="#fichero-ejemplo-unidad-organizativa" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">ou</span><span class="o">=</span><span class="n">usuarios</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">aula</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">local</span>
+<span class="n">objectClass</span><span class="o">:</span><span class="w"> </span><span class="n">organizationalUnit</span>
+<span class="n">ou</span><span class="o">:</span><span class="w"> </span><span class="n">usuarios</span>
+
+<span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">ou</span><span class="o">=</span><span class="n">grupos</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">aula</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">local</span>
+<span class="n">objectClass</span><span class="o">:</span><span class="w"> </span><span class="n">organizationalUnit</span>
+<span class="n">ou</span><span class="o">:</span><span class="w"> </span><span class="n">grupos</span>
+</code></pre></div>
+
+<h2 id="editar-archivo-etcldapldapconf">Editar archivo /etc/ldap/ldap.conf<a class="headerlink" href="#editar-archivo-etcldapldapconf" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="err">BASE</span>    <span class="err">dc=nombre-dominio</span><span class="p">,</span><span class="err">dc=extension</span>
+<span class="err">URI</span> <span class="nn">ldap</span><span class="p">:</span><span class="err">//</span><span class="nv">&lt;IP&gt;</span><span class="p">:</span><span class="nt">389</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

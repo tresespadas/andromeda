@@ -1,7 +1,7 @@
-site_name: My Personal Blog
-site_url: https://yourusername.github.io/my-blog/
-site_author: Your Name
-site_description: My personal blog built with MkDocs Material
+site_name: El blog de ASIR
+site_url: https://tresespadas.github.io/andromeda/
+site_author: Álvaro
+site_description: El blog de ASIR
 theme:
   name: material
   palette:
