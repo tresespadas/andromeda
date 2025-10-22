@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -571,9 +571,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichero-ejemplo-unidad-organizativa" class="md-nav__link">
+  <a href="#modificacion-de-elementos-en-el-directorio" class="md-nav__link">
     <span class="md-ellipsis">
-      Fichero ejemplo: Unidad organizativa
+      Modificación de elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichero-ejemplo-modificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero ejemplo: Modificación
     </span>
   </a>
   
@@ -717,9 +726,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fichero-ejemplo-unidad-organizativa" class="md-nav__link">
+  <a href="#modificacion-de-elementos-en-el-directorio" class="md-nav__link">
     <span class="md-ellipsis">
-      Fichero ejemplo: Unidad organizativa
+      Modificación de elementos en el directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fichero-ejemplo-modificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichero ejemplo: Modificación
     </span>
   </a>
   
@@ -781,14 +799,15 @@ sudo apt dist-update
 <div class="codehilite"><pre><span></span><code>sudo ldapdelete -x -W -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; &lt;dn-que-borrar&gt;
 </code></pre></div>
 
-<h2 id="fichero-ejemplo-unidad-organizativa">Fichero ejemplo: Unidad organizativa<a class="headerlink" href="#fichero-ejemplo-unidad-organizativa" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">ou</span><span class="o">=</span><span class="n">usuarios</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">aula</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">local</span>
-<span class="n">objectClass</span><span class="o">:</span><span class="w"> </span><span class="n">organizationalUnit</span>
-<span class="n">ou</span><span class="o">:</span><span class="w"> </span><span class="n">usuarios</span>
+<h2 id="modificacion-de-elementos-en-el-directorio">Modificación de elementos en el directorio<a class="headerlink" href="#modificacion-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo ldapmodify -x -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; -W -f &lt;fichero&gt;.ldif
+</code></pre></div>
 
-<span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">ou</span><span class="o">=</span><span class="n">grupos</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">aula</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">local</span>
-<span class="n">objectClass</span><span class="o">:</span><span class="w"> </span><span class="n">organizationalUnit</span>
-<span class="n">ou</span><span class="o">:</span><span class="w"> </span><span class="n">grupos</span>
+<h2 id="fichero-ejemplo-modificacion">Fichero ejemplo: Modificación<a class="headerlink" href="#fichero-ejemplo-modificacion" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">cn</span><span class="o">=</span><span class="n">wwomang</span><span class="o">,</span><span class="n">ou</span><span class="o">=</span><span class="n">usuarios</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">iesguadalpena</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">es</span>
+<span class="n">changetype</span><span class="o">:</span><span class="w"> </span><span class="n">modify</span>
+<span class="n">replace</span><span class="o">:</span><span class="w"> </span><span class="n">mail</span>
+<span class="n">mail</span><span class="o">:</span><span class="w"> </span><span class="n">wwoman</span><span class="o">.</span><span class="na">garcia</span><span class="err">@</span><span class="n">g</span><span class="o">.</span><span class="na">educaand</span><span class="o">.</span><span class="na">es</span>
 </code></pre></div>
 
 <h2 id="editar-archivo-etcldapldapconf">Editar archivo /etc/ldap/ldap.conf<a class="headerlink" href="#editar-archivo-etcldapldapconf" title="Permanent link">&para;</a></h2>
