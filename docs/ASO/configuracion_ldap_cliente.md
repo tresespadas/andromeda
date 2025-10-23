@@ -30,5 +30,3 @@ sudo apt install nslcd
 ```
 http://<IP-Servidor>:389/lam
 ```
-```
-```
