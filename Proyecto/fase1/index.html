@@ -581,6 +581,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -592,6 +605,49 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeras-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeras pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primeras pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qemukvm-libvirt" class="md-nav__link">
+    <span class="md-ellipsis">
+      QEMU/KVM + libvirt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -625,6 +681,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeras-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeras pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primeras pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qemukvm-libvirt" class="md-nav__link">
+    <span class="md-ellipsis">
+      QEMU/KVM + libvirt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -640,6 +728,16 @@
 
 
 <h1 id="preparacion-vagrant-libvirt-qemukvm">Preparación vagrant + libvirt + QEMU/KVM<a class="headerlink" href="#preparacion-vagrant-libvirt-qemukvm" title="Permanent link">&para;</a></h1>
+<h2 id="primeras-pruebas">Primeras pruebas<a class="headerlink" href="#primeras-pruebas" title="Permanent link">&para;</a></h2>
+<h3 id="qemukvm-libvirt">QEMU/KVM + libvirt<a class="headerlink" href="#qemukvm-libvirt" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>sudo apt install qemu-system libvirt-clients libvirt-daemon-system
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>sudo apt install virtinst
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>sudo usermod -aG libvirt $USER
+</code></pre></div>
 
 
 
