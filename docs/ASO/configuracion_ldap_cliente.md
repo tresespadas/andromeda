@@ -26,4 +26,7 @@ sudo systemctl start libnss-ldap.service
 ```
 sudo apt install nslcd
 ```
-
+## Acceso a LAM a través del navegador
+```
+http://<IP-Servidor>:389/lam
+```
