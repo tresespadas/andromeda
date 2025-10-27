@@ -9,7 +9,7 @@ sudo apt install virtinst
 ```
 En Arch
 ```
-sudo pacman -S qemu libvirt virt-install
+sudo pacman -S qemu-full libvirt virt-install
 ```
 ```
 sudo usermod -aG libvirt $USER
