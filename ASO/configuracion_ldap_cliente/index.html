@@ -827,13 +827,13 @@
 
 <h1 id="configuracion-ldap-cliente">Configuración LDAP Cliente<a class="headerlink" href="#configuracion-ldap-cliente" title="Permanent link">&para;</a></h1>
 <h2 id="actualizacion-del-sistema">Actualización del sistema<a class="headerlink" href="#actualizacion-del-sistema" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt update
+<pre class="codehilite"><code>sudo apt update
 sudo apt dist-update
-</code></pre></div>
+</code></pre>
 
 <h2 id="instalacion-de-paquetes-necesarios">Instalación de paquetes necesarios<a class="headerlink" href="#instalacion-de-paquetes-necesarios" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt-get install libnss-ldap libpam-ldap ldap-utils
-</code></pre></div>
+<pre class="codehilite"><code>sudo apt-get install libnss-ldap libpam-ldap ldap-utils
+</code></pre>
 
 <h2 id="ajustes-en-etcnsswitchconf">Ajustes en /etc/nsswitch.conf<a class="headerlink" href="#ajustes-en-etcnsswitchconf" title="Permanent link">&para;</a></h2>
 <p>Establecer búsquedas de passwd, group, shadow y gshadow en ldap.</p>
@@ -841,20 +841,20 @@ sudo apt dist-update
 <p>Eliminar use_authok</p>
 <h2 id="ajustes-en-etcpamdcommon-session">Ajustes en /etc/pam.d/common-session<a class="headerlink" href="#ajustes-en-etcpamdcommon-session" title="Permanent link">&para;</a></h2>
 <p>Añadir la línea:</p>
-<div class="codehilite"><pre><span></span><code>session optional    pam_mkhomedir.so skel=/etc/skel umask=077
-</code></pre></div>
+<pre class="codehilite"><code>session optional    pam_mkhomedir.so skel=/etc/skel umask=077
+</code></pre>
 
 <h2 id="habilitar-el-servicio-libnss-ldap">Habilitar el servicio libnss-ldap<a class="headerlink" href="#habilitar-el-servicio-libnss-ldap" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo systemctl start libnss-ldap.service
-</code></pre></div>
+<pre class="codehilite"><code>sudo systemctl start libnss-ldap.service
+</code></pre>
 
 <h2 id="habilitar-el-inicio-de-sesion-en-modo-grafico">Habilitar el inicio de sesión en modo gráfico<a class="headerlink" href="#habilitar-el-inicio-de-sesion-en-modo-grafico" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt install nslcd
-</code></pre></div>
+<pre class="codehilite"><code>sudo apt install nslcd
+</code></pre>
 
 <h2 id="acceso-a-lam-a-traves-del-navegador">Acceso a LAM a través del navegador<a class="headerlink" href="#acceso-a-lam-a-traves-del-navegador" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>http://&lt;IP-Servidor&gt;:389/lam
-</code></pre></div>
+<pre class="codehilite"><code>http://&lt;IP-Servidor&gt;:389/lam
+</code></pre>
 
 
 

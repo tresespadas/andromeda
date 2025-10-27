@@ -863,50 +863,50 @@
 
 <h1 id="configuracion-ldap-servidor">Configuración LDAP Servidor<a class="headerlink" href="#configuracion-ldap-servidor" title="Permanent link">&para;</a></h1>
 <h2 id="actualizacion-del-sistema">Actualización del sistema<a class="headerlink" href="#actualizacion-del-sistema" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt update
+<pre class="codehilite"><code>sudo apt update
 sudo apt dist-update
-</code></pre></div>
+</code></pre>
 
 <h2 id="resolucion-de-host-en-etchosts">Resolución de host en /etc/hosts<a class="headerlink" href="#resolucion-de-host-en-etchosts" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>#&lt;IP&gt; &lt;hostname&gt;.&lt;dominio&gt; &lt;hostname&gt;
+<pre class="codehilite"><code>#&lt;IP&gt; &lt;hostname&gt;.&lt;dominio&gt; &lt;hostname&gt;
 192.168.104.10 ldap-server.iesguadalpena.es ldap-server
-</code></pre></div>
+</code></pre>
 
 <h2 id="instalacion-del-software-ldap">Instalación del software LDAP<a class="headerlink" href="#instalacion-del-software-ldap" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt install slapd ldap-utils -y
-</code></pre></div>
+<pre class="codehilite"><code>sudo apt install slapd ldap-utils -y
+</code></pre>
 
 <h2 id="habilitar-servicio-al-encender-el-servidor">Habilitar servicio al encender el servidor<a class="headerlink" href="#habilitar-servicio-al-encender-el-servidor" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo systemctl enable slapd.service
-</code></pre></div>
+<pre class="codehilite"><code>sudo systemctl enable slapd.service
+</code></pre>
 
 <h2 id="anadir-un-fichero-al-directorio">Añadir un fichero al directorio<a class="headerlink" href="#anadir-un-fichero-al-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapadd -x -D cn=admin,dc=iesguadalpena,dc=es -W -f &lt;nombre-fichero&gt;.ldif
-</code></pre></div>
+<pre class="codehilite"><code>sudo ldapadd -x -D cn=admin,dc=iesguadalpena,dc=es -W -f &lt;nombre-fichero&gt;.ldif
+</code></pre>
 
 <h2 id="buscar-elementos-en-el-directorio">Buscar elementos en el directorio<a class="headerlink" href="#buscar-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapsearch -xLLL -b &quot;dc=iesguadalpena,dc=es&quot; &lt;condicion&gt; &lt;atributo-que-mostrar&gt;
-</code></pre></div>
+<pre class="codehilite"><code>sudo ldapsearch -xLLL -b &quot;dc=iesguadalpena,dc=es&quot; &lt;condicion&gt; &lt;atributo-que-mostrar&gt;
+</code></pre>
 
 <h2 id="borrado-de-elementos-en-el-directorio">Borrado de elementos en el directorio<a class="headerlink" href="#borrado-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapdelete -x -W -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; &lt;dn-que-borrar&gt;
-</code></pre></div>
+<pre class="codehilite"><code>sudo ldapdelete -x -W -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; &lt;dn-que-borrar&gt;
+</code></pre>
 
 <h2 id="modificacion-de-elementos-en-el-directorio">Modificación de elementos en el directorio<a class="headerlink" href="#modificacion-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapmodify -x -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; -W -f &lt;fichero&gt;.ldif
-</code></pre></div>
+<pre class="codehilite"><code>sudo ldapmodify -x -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; -W -f &lt;fichero&gt;.ldif
+</code></pre>
 
 <h2 id="fichero-ejemplo-modificacion">Fichero ejemplo: Modificación<a class="headerlink" href="#fichero-ejemplo-modificacion" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">cn</span><span class="o">=</span><span class="n">wwomang</span><span class="o">,</span><span class="n">ou</span><span class="o">=</span><span class="n">usuarios</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">iesguadalpena</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">es</span>
-<span class="n">changetype</span><span class="o">:</span><span class="w"> </span><span class="n">modify</span>
-<span class="n">replace</span><span class="o">:</span><span class="w"> </span><span class="n">mail</span>
-<span class="n">mail</span><span class="o">:</span><span class="w"> </span><span class="n">wwoman</span><span class="o">.</span><span class="na">garcia</span><span class="err">@</span><span class="n">g</span><span class="o">.</span><span class="na">educaand</span><span class="o">.</span><span class="na">es</span>
-</code></pre></div>
+<pre class="codehilite"><code>dn: cn=wwomang,ou=usuarios,dc=iesguadalpena,dc=es
+changetype: modify
+replace: mail
+mail: wwoman.garcia@g.educaand.es
+</code></pre>
 
 <h2 id="editar-archivo-etcldapldapconf">Editar archivo /etc/ldap/ldap.conf<a class="headerlink" href="#editar-archivo-etcldapldapconf" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="err">BASE</span>    <span class="err">dc=nombre-dominio</span><span class="p">,</span><span class="err">dc=extension</span>
-<span class="err">URI</span> <span class="nn">ldap</span><span class="p">:</span><span class="err">//</span><span class="nv">&lt;IP&gt;</span><span class="p">:</span><span class="nt">389</span>
-</code></pre></div>
+<pre class="codehilite"><code>BASE    dc=nombre-dominio,dc=extension
+URI ldap://&lt;IP&gt;:389
+</code></pre>
 
 
 

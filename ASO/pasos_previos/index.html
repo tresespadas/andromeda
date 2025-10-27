@@ -773,33 +773,33 @@
 
 <h1 id="pasos-previos">Pasos previos<a class="headerlink" href="#pasos-previos" title="Permanent link">&para;</a></h1>
 <h2 id="creacion-de-nuevo-usuario">Creación de nuevo usuario<a class="headerlink" href="#creacion-de-nuevo-usuario" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo adduser &lt;nombre&gt;
+<pre class="codehilite"><code>sudo adduser &lt;nombre&gt;
 sudo usermod -aG sudo,adm &lt;nombre&gt;
-</code></pre></div>
+</code></pre>
 
 <h2 id="cambio-del-hostname">Cambio del hostname<a class="headerlink" href="#cambio-del-hostname" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo hostnamectl set-hostname &lt;hostname&gt;
-</code></pre></div>
+<pre class="codehilite"><code>sudo hostnamectl set-hostname &lt;hostname&gt;
+</code></pre>
 
 <h2 id="comprobacion-ips-maquina">Comprobación IPs máquina<a class="headerlink" href="#comprobacion-ips-maquina" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>ip -br a
-</code></pre></div>
+<pre class="codehilite"><code>ip -br a
+</code></pre>
 
 <h2 id="editar-archivo-de-red-etcnetplan99_configyaml">Editar archivo de red /etc/netplan/99_config.yaml<a class="headerlink" href="#editar-archivo-de-red-etcnetplan99_configyaml" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">network</span><span class="o">:</span>
-<span class="w">  </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
-<span class="w">  </span><span class="n">renderer</span><span class="o">:</span><span class="w"> </span><span class="n">networkd</span>
-<span class="w">  </span><span class="n">ethernets</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ens18</span><span class="o">:</span>
-<span class="w">      </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="n">ens19</span><span class="o">:</span>
-<span class="w">      </span><span class="n">addresses</span><span class="o">:</span>
-<span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="mf">192.168</span><span class="o">.</span><span class="mf">104.10</span><span class="o">/</span><span class="mi">24</span>
-</code></pre></div>
+<pre class="codehilite"><code>network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens18:
+      dhcp4: true
+    ens19:
+      addresses:
+        - 192.168.104.10/24
+</code></pre>
 
 <h2 id="configurar-la-hora-y-zona-horaria-de-madrid">Configurar la hora y zona horaria de Madrid<a class="headerlink" href="#configurar-la-hora-y-zona-horaria-de-madrid" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo timedatectl set-timezone &quot;Europe/Madrid&quot;
-</code></pre></div>
+<pre class="codehilite"><code>sudo timedatectl set-timezone &quot;Europe/Madrid&quot;
+</code></pre>
 
 
 

@@ -852,46 +852,46 @@
 <h1 id="conectividad-con-internet-y-red-local">Conectividad con Internet y red local<a class="headerlink" href="#conectividad-con-internet-y-red-local" title="Permanent link">&para;</a></h1>
 <h2 id="debian">Debian<a class="headerlink" href="#debian" title="Permanent link">&para;</a></h2>
 <h3 id="comprobando-interfaces">Comprobando interfaces<a class="headerlink" href="#comprobando-interfaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nv">ip</span><span class="w"> </span><span class="nv">link</span><span class="w"> </span><span class="k">show</span>
-</code></pre></div>
+<pre class="codehilite"><code>ip link show
+</code></pre>
 
 <h3 id="apagando-algunas-interfaces">Apagando algunas interfaces<a class="headerlink" href="#apagando-algunas-interfaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>ip link set dev eth1 down
+<pre class="codehilite"><code>ip link set dev eth1 down
 ...
-</code></pre></div>
+</code></pre>
 
 <h3 id="archivo-de-configuracion">Archivo de configuracion<a class="headerlink" href="#archivo-de-configuracion" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>/etc/network/interfaces
-</code></pre></div>
+<pre class="codehilite"><code>/etc/network/interfaces
+</code></pre>
 
 <h3 id="reinicio-de-la-red">Reinicio de la red<a class="headerlink" href="#reinicio-de-la-red" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>sudo systemctl restart networking
-</code></pre></div>
+<pre class="codehilite"><code>sudo systemctl restart networking
+</code></pre>
 
 <h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h2>
 <h3 id="archivo-de-configuracion_1">Archivo de configuracion<a class="headerlink" href="#archivo-de-configuracion_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>sudo vim /etc/netplan/50-cloud-init.yaml
-</code></pre></div>
+<pre class="codehilite"><code>sudo vim /etc/netplan/50-cloud-init.yaml
+</code></pre>
 
-<div class="codehilite"><pre><span></span><code><span class="n">network</span><span class="o">:</span>
-<span class="w">  </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
-<span class="w">  </span><span class="n">ethernets</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ens18</span><span class="o">:</span>
-<span class="w">      </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<pre class="codehilite"><code>network:
+  version: 2
+  ethernets:
+    ens18:
+      dhcp4: true
 
-<span class="w">    </span><span class="n">ens19</span><span class="o">:</span>
-<span class="w">      </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">      </span><span class="n">addresses</span><span class="o">:</span>
-<span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="mf">192.168</span><span class="o">.</span><span class="mf">104.10</span><span class="o">/</span><span class="mi">24</span>
-<span class="w">      </span><span class="n">nameservers</span><span class="o">:</span>
-<span class="w">        </span><span class="n">addresses</span><span class="o">:</span>
-<span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span>
-<span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="mf">8.8</span><span class="o">.</span><span class="mf">4.4</span>
-</code></pre></div>
+    ens19:
+      dhcp4: false
+      addresses:
+        - 192.168.104.10/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+</code></pre>
 
 <h3 id="aplicacion-de-los-cambios">Aplicación de los cambios<a class="headerlink" href="#aplicacion-de-los-cambios" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>sudo netplan apply
-</code></pre></div>
+<pre class="codehilite"><code>sudo netplan apply
+</code></pre>
 
 
 
