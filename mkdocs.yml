@@ -39,4 +39,3 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
-
