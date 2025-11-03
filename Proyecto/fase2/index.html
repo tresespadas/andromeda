@@ -12,10 +12,8 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/Proyecto/fase1/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/Proyecto/fase2/">
       
-      
-        <link rel="prev" href="../../ASO/configuracion_ldap_cliente/">
       
       
       
@@ -24,7 +22,7 @@
     
     
       
-        <title>Fase 1 - El blog de ASIR</title>
+        <title>Kubespray - El blog de ASIR</title>
       
     
     
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preparacion-vagrant-libvirt-qemukvm" class="md-skip">
+        <a href="#kubespray" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fase 1
+              Kubespray
             
           </span>
         </div>
@@ -255,13 +253,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../fase1/" class="md-tabs__link">
           
   
   
@@ -523,29 +519,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -558,7 +551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Proyecto
@@ -569,32 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Fase 1
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fase1/" class="md-nav__link">
         
   
   
@@ -605,77 +576,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#qemukvm-libvirt" class="md-nav__link">
-    <span class="md-ellipsis">
-      QEMU/KVM + libvirt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vagrant" class="md-nav__link">
-    <span class="md-ellipsis">
-      vagrant
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      virsh
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="virsh">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-de-las-redes-existentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comprobación de las redes existentes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creacion-de-la-red-interna" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creación de la red interna
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -715,53 +615,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qemukvm-libvirt" class="md-nav__link">
+  <a href="#instalacion" class="md-nav__link">
     <span class="md-ellipsis">
-      QEMU/KVM + libvirt
+      Instalación
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vagrant" class="md-nav__link">
-    <span class="md-ellipsis">
-      vagrant
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      virsh
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="virsh">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-de-las-redes-existentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comprobación de las redes existentes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creacion-de-la-red-interna" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creación de la red interna
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -781,48 +639,9 @@
 
 
 
-<h1 id="preparacion-vagrant-libvirt-qemukvm">Preparación vagrant + libvirt + QEMU/KVM<a class="headerlink" href="#preparacion-vagrant-libvirt-qemukvm" title="Permanent link">&para;</a></h1>
-<h2 id="qemukvm-libvirt">QEMU/KVM + libvirt<a class="headerlink" href="#qemukvm-libvirt" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code>sudo apt install qemu-system libvirt-clients libvirt-daemon-system
-</code></pre>
-
-<pre class="codehilite"><code>sudo apt install virtinst
-</code></pre>
-
-<p>En Arch</p>
-<pre class="codehilite"><code>sudo pacman -S qemu-full libvirt virt-install
-</code></pre>
-
-<pre class="codehilite"><code>sudo usermod -aG libvirt $USER
-</code></pre>
-
-<h2 id="vagrant">vagrant<a class="headerlink" href="#vagrant" title="Permanent link">&para;</a></h2>
-<p>En Arch</p>
-<pre class="codehilite"><code>yay -S vagrant
-</code></pre>
-
-<pre class="codehilite"><code>vagrant plugin install vagrant-libvirt
-vagrant up --provider=libvirt
-</code></pre>
-
-<h2 id="virsh">virsh<a class="headerlink" href="#virsh" title="Permanent link">&para;</a></h2>
-<h3 id="comprobacion-de-las-redes-existentes">Comprobación de las redes existentes<a class="headerlink" href="#comprobacion-de-las-redes-existentes" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code>virsh net-list --all
-</code></pre>
-
-<h3 id="creacion-de-la-red-interna">Creación de la red interna<a class="headerlink" href="#creacion-de-la-red-interna" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code>cat &lt;&lt;EOF &gt; /tmp/red-interna.xml
-&lt;network&gt;
-  &lt;name&gt;red-interna&lt;/name&gt;
-  &lt;forward mode='none'/&gt;
-  &lt;ip address='10.20.30.1' netmask='255.255.255.0'/&gt;
-&lt;/network&gt;
-EOF
-</code></pre>
-
-<pre class="codehilite"><code>sudo virsh net-define /tmp/red-interna.xml
-sudo virsh net-autostart red-interna
-sudo virsh net-start red-interna
+<h1 id="kubespray">Kubespray<a class="headerlink" href="#kubespray" title="Permanent link">&para;</a></h1>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code>...
 </code></pre>
 
 
