@@ -32,6 +32,7 @@ nav:
       - Configuración LDAP Cliente: ASO/configuracion_ldap_cliente.md
   - Proyecto:
       - Fase 1: Proyecto/fase1.md
+      - Fase 2: Proyecto/fase2.md
 markdown_extensions:
   - admonition
   - codehilite
