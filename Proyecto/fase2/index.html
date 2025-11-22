@@ -796,7 +796,21 @@
 
 <h1 id="kubespray">Kubespray<a class="headerlink" href="#kubespray" title="Permanent link">&para;</a></h1>
 <h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>...
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/kubernetes-sigs/kubespray.git
+cd kubespray
+python -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+</code></pre></div>
+
+<p>Para activar Ansible (activar venv)</p>
+<div class="codehilite"><pre><span></span><code>cd kubespray
+source venv/bin/activate
+</code></pre></div>
+
+<p>Para desactivar Ansible (activar venv)</p>
+<div class="codehilite"><pre><span></span><code>deactivate
 </code></pre></div>
 
 

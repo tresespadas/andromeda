@@ -2,98 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tresespadas.github.io/andromeda/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/about/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/ASO/configuracion_ldap_cliente/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/ASO/configuracion_ldap_servidor/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/ASO/pasos_previos/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/Proyecto/fase1/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/Proyecto/fase2/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/SRI/conectividad/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/blog/first-post/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
     <url>
          <loc>https://tresespadas.github.io/andromeda/blog/second-post/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/backrefs-6.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/idna-3.11.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/markdown-3.10.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/mkdocs_get_deps-0.2.0.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/mkdocs_material_extensions-1.3.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib/python3.13/site-packages/pymdown_extensions-10.17.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/backrefs-6.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/idna-3.11.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/markdown-3.10.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/mkdocs_get_deps-0.2.0.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/mkdocs_material_extensions-1.3.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
-    </url>
-    <url>
-         <loc>https://tresespadas.github.io/andromeda/venv/lib64/python3.13/site-packages/pymdown_extensions-10.17.1.dist-info/licenses/LICENSE/</loc>
-         <lastmod>2025-11-16</lastmod>
+         <lastmod>2025-11-22</lastmod>
     </url>
 </urlset>
