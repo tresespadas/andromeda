@@ -12,31 +12,27 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/configuracion_ldap_servidor/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/LDAP/configuracion_ldap_cliente/">
       
       
-        <link rel="prev" href="../pasos_previos/">
-      
-      
-        <link rel="next" href="../configuracion_ldap_cliente/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+      <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Configuración LDAP Servidor - El blog de ASIR</title>
+        <title>Configuración LDAP Cliente - El blog de ASIR</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracion-ldap-servidor" class="md-skip">
+        <a href="#configuracion-ldap-cliente" class="md-skip">
           Skip to content
         </a>
       
@@ -96,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="El blog de ASIR" class="md-header__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+    <a href="../../.." title="El blog de ASIR" class="md-header__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuración LDAP Servidor
+              Configuración LDAP Cliente
             
           </span>
         </div>
@@ -202,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -223,7 +219,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../SRI/conectividad/" class="md-tabs__link">
+        <a href="../../../SRI/conectividad/" class="md-tabs__link">
           
   
   
@@ -239,13 +235,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../pasos_previos/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../pasos_previos/" class="md-tabs__link">
           
   
   
@@ -265,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Proyecto/fase1/" class="md-tabs__link">
+        <a href="../../../Proyecto/fase1/" class="md-tabs__link">
           
   
   
@@ -299,9 +293,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="El blog de ASIR" class="md-nav__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+    <a href="../../.." title="El blog de ASIR" class="md-nav__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     El blog de ASIR
@@ -316,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -395,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SRI/conectividad/" class="md-nav__link">
+      <a href="../../../SRI/conectividad/" class="md-nav__link">
         
   
   
@@ -427,29 +421,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -467,7 +458,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -485,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pasos_previos/" class="md-nav__link">
+      <a href="../../pasos_previos/" class="md-nav__link">
         
   
   
@@ -510,37 +501,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuración LDAP Servidor
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../configuracion_ldap_servidor.md" class="md-nav__link">
         
   
   
@@ -556,136 +520,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#actualizacion-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Actualización del sistema
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resolucion-de-host-en-etchosts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolución de host en /etc/hosts
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-del-software-ldap" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instalación del software LDAP
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#habilitar-servicio-al-encender-el-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Habilitar servicio al encender el servidor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anadir-un-fichero-al-directorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Añadir un fichero al directorio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buscar-elementos-en-el-directorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Buscar elementos en el directorio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#borrado-de-elementos-en-el-directorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Borrado de elementos en el directorio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modificacion-de-elementos-en-el-directorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modificación de elementos en el directorio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fichero-ejemplo-modificacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fichero ejemplo: Modificación
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editar-archivo-etcldapldapconf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Editar archivo /etc/ldap/ldap.conf
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -698,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuracion_ldap_cliente/" class="md-nav__link">
+      <a href="../../configuracion_ldap_cliente.md" class="md-nav__link">
         
   
   
@@ -785,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Proyecto/fase1/" class="md-nav__link">
+      <a href="../../../Proyecto/fase1/" class="md-nav__link">
         
   
   
@@ -813,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Proyecto/fase2/" class="md-nav__link">
+      <a href="../../../Proyecto/fase2/" class="md-nav__link">
         
   
   
@@ -879,10 +713,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolucion-de-host-en-etchosts" class="md-nav__link">
+  <a href="#instalacion-de-paquetes-necesarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resolución de host en /etc/hosts
+        Instalación de paquetes necesarios
       
     </span>
   </a>
@@ -890,10 +724,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-del-software-ldap" class="md-nav__link">
+  <a href="#ajustes-en-etcnsswitchconf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Instalación del software LDAP
+        Ajustes en /etc/nsswitch.conf
       
     </span>
   </a>
@@ -901,10 +735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#habilitar-servicio-al-encender-el-servidor" class="md-nav__link">
+  <a href="#ajustes-en-etcpamdcommon-password" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Habilitar servicio al encender el servidor
+        Ajustes en /etc/pam.d/common-password
       
     </span>
   </a>
@@ -912,10 +746,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-un-fichero-al-directorio" class="md-nav__link">
+  <a href="#ajustes-en-etcpamdcommon-session" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Añadir un fichero al directorio
+        Ajustes en /etc/pam.d/common-session
       
     </span>
   </a>
@@ -923,10 +757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buscar-elementos-en-el-directorio" class="md-nav__link">
+  <a href="#habilitar-el-servicio-libnss-ldap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buscar elementos en el directorio
+        Habilitar el servicio libnss-ldap
       
     </span>
   </a>
@@ -934,10 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#borrado-de-elementos-en-el-directorio" class="md-nav__link">
+  <a href="#habilitar-el-inicio-de-sesion-en-modo-grafico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Borrado de elementos en el directorio
+        Habilitar el inicio de sesión en modo gráfico
       
     </span>
   </a>
@@ -945,32 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modificacion-de-elementos-en-el-directorio" class="md-nav__link">
+  <a href="#acceso-a-lam-a-traves-del-navegador" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modificación de elementos en el directorio
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fichero-ejemplo-modificacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fichero ejemplo: Modificación
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editar-archivo-etcldapldapconf" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Editar archivo /etc/ldap/ldap.conf
+        Acceso a LAM a través del navegador
       
     </span>
   </a>
@@ -994,51 +806,35 @@
 
 
 
-<h1 id="configuracion-ldap-servidor">Configuración LDAP Servidor<a class="headerlink" href="#configuracion-ldap-servidor" title="Permanent link">&para;</a></h1>
+<h1 id="configuracion-ldap-cliente">Configuración LDAP Cliente<a class="headerlink" href="#configuracion-ldap-cliente" title="Permanent link">&para;</a></h1>
 <h2 id="actualizacion-del-sistema">Actualización del sistema<a class="headerlink" href="#actualizacion-del-sistema" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>sudo apt update
 sudo apt dist-update
 </code></pre></div>
 
-<h2 id="resolucion-de-host-en-etchosts">Resolución de host en /etc/hosts<a class="headerlink" href="#resolucion-de-host-en-etchosts" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>#&lt;IP&gt; &lt;hostname&gt;.&lt;dominio&gt; &lt;hostname&gt;
-192.168.104.10 ldap-server.iesguadalpena.es ldap-server
+<h2 id="instalacion-de-paquetes-necesarios">Instalación de paquetes necesarios<a class="headerlink" href="#instalacion-de-paquetes-necesarios" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo apt-get install libnss-ldap libpam-ldap ldap-utils
 </code></pre></div>
 
-<h2 id="instalacion-del-software-ldap">Instalación del software LDAP<a class="headerlink" href="#instalacion-del-software-ldap" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo apt install slapd ldap-utils -y
+<h2 id="ajustes-en-etcnsswitchconf">Ajustes en /etc/nsswitch.conf<a class="headerlink" href="#ajustes-en-etcnsswitchconf" title="Permanent link">&para;</a></h2>
+<p>Establecer búsquedas de passwd, group, shadow y gshadow en ldap.</p>
+<h2 id="ajustes-en-etcpamdcommon-password">Ajustes en /etc/pam.d/common-password<a class="headerlink" href="#ajustes-en-etcpamdcommon-password" title="Permanent link">&para;</a></h2>
+<p>Eliminar use_authok</p>
+<h2 id="ajustes-en-etcpamdcommon-session">Ajustes en /etc/pam.d/common-session<a class="headerlink" href="#ajustes-en-etcpamdcommon-session" title="Permanent link">&para;</a></h2>
+<p>Añadir la línea:</p>
+<div class="codehilite"><pre><span></span><code>session optional    pam_mkhomedir.so skel=/etc/skel umask=077
 </code></pre></div>
 
-<h2 id="habilitar-servicio-al-encender-el-servidor">Habilitar servicio al encender el servidor<a class="headerlink" href="#habilitar-servicio-al-encender-el-servidor" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo systemctl enable slapd.service
+<h2 id="habilitar-el-servicio-libnss-ldap">Habilitar el servicio libnss-ldap<a class="headerlink" href="#habilitar-el-servicio-libnss-ldap" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo systemctl start libnss-ldap.service
 </code></pre></div>
 
-<h2 id="anadir-un-fichero-al-directorio">Añadir un fichero al directorio<a class="headerlink" href="#anadir-un-fichero-al-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapadd -x -D cn=admin,dc=iesguadalpena,dc=es -W -f &lt;nombre-fichero&gt;.ldif
+<h2 id="habilitar-el-inicio-de-sesion-en-modo-grafico">Habilitar el inicio de sesión en modo gráfico<a class="headerlink" href="#habilitar-el-inicio-de-sesion-en-modo-grafico" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo apt install nslcd
 </code></pre></div>
 
-<h2 id="buscar-elementos-en-el-directorio">Buscar elementos en el directorio<a class="headerlink" href="#buscar-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapsearch -xLLL -b &quot;dc=iesguadalpena,dc=es&quot; &lt;condicion&gt; &lt;atributo-que-mostrar&gt;
-</code></pre></div>
-
-<h2 id="borrado-de-elementos-en-el-directorio">Borrado de elementos en el directorio<a class="headerlink" href="#borrado-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapdelete -x -W -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; &lt;dn-que-borrar&gt;
-</code></pre></div>
-
-<h2 id="modificacion-de-elementos-en-el-directorio">Modificación de elementos en el directorio<a class="headerlink" href="#modificacion-de-elementos-en-el-directorio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo ldapmodify -x -D &quot;cn=admin,dc=iesguadalpena,dc=es&quot; -W -f &lt;fichero&gt;.ldif
-</code></pre></div>
-
-<h2 id="fichero-ejemplo-modificacion">Fichero ejemplo: Modificación<a class="headerlink" href="#fichero-ejemplo-modificacion" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">dn</span><span class="o">:</span><span class="w"> </span><span class="n">cn</span><span class="o">=</span><span class="n">wwomang</span><span class="o">,</span><span class="n">ou</span><span class="o">=</span><span class="n">usuarios</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">iesguadalpena</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">es</span>
-<span class="n">changetype</span><span class="o">:</span><span class="w"> </span><span class="n">modify</span>
-<span class="n">replace</span><span class="o">:</span><span class="w"> </span><span class="n">mail</span>
-<span class="n">mail</span><span class="o">:</span><span class="w"> </span><span class="n">wwoman</span><span class="o">.</span><span class="na">garcia</span><span class="err">@</span><span class="n">g</span><span class="o">.</span><span class="na">educaand</span><span class="o">.</span><span class="na">es</span>
-</code></pre></div>
-
-<h2 id="editar-archivo-etcldapldapconf">Editar archivo /etc/ldap/ldap.conf<a class="headerlink" href="#editar-archivo-etcldapldapconf" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="err">BASE</span>    <span class="err">dc=nombre-dominio</span><span class="p">,</span><span class="err">dc=extension</span>
-<span class="err">URI</span> <span class="nn">ldap</span><span class="p">:</span><span class="err">//</span><span class="nv">&lt;IP&gt;</span><span class="p">:</span><span class="nt">389</span>
+<h2 id="acceso-a-lam-a-traves-del-navegador">Acceso a LAM a través del navegador<a class="headerlink" href="#acceso-a-lam-a-traves-del-navegador" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>http://&lt;IP-Servidor&gt;:389/lam
 </code></pre></div>
 
 
@@ -1095,10 +891,10 @@ sudo apt dist-update
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
