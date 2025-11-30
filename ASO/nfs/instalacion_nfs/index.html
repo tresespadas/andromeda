@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-de-paquetes-para-nfs" class="md-skip">
+        <a href="#instalacion-y-configuracion-de-nfs" class="md-skip">
           Skip to content
         </a>
       
@@ -690,6 +690,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración NFS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -706,6 +724,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-paquetes-para-nfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de paquetes para NFS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compartir-una-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compartir una carpeta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-etcexports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo /etc/exports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-desde-cliente-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceso desde cliente Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-automatico-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje automático en Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje en Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -862,6 +965,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-paquetes-para-nfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de paquetes para NFS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compartir-una-carpeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compartir una carpeta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-etcexports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo /etc/exports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-desde-cliente-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceso desde cliente Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-automatico-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje automático en Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje en Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -877,7 +1054,8 @@
 
 
 
-<h1 id="instalacion-de-paquetes-para-nfs">Instalación de paquetes para NFS<a class="headerlink" href="#instalacion-de-paquetes-para-nfs" title="Permanent link">&para;</a></h1>
+<h1 id="instalacion-y-configuracion-de-nfs">Instalación y configuración de NFS<a class="headerlink" href="#instalacion-y-configuracion-de-nfs" title="Permanent link">&para;</a></h1>
+<h2 id="instalacion-de-paquetes-para-nfs">Instalación de paquetes para NFS<a class="headerlink" href="#instalacion-de-paquetes-para-nfs" title="Permanent link">&para;</a></h2>
 <p>En el servidor</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-get install nfs-kernel-server nfs-common rpcbind
 </code></pre></div>
@@ -886,14 +1064,14 @@
 <div class="codehilite"><pre><span></span><code>sudo reboot
 </code></pre></div>
 
-<h1 id="compartir-una-carpeta">Compartir una carpeta<a class="headerlink" href="#compartir-una-carpeta" title="Permanent link">&para;</a></h1>
+<h2 id="compartir-una-carpeta">Compartir una carpeta<a class="headerlink" href="#compartir-una-carpeta" title="Permanent link">&para;</a></h2>
 <p>Permisos y owners</p>
 <div class="codehilite"><pre><span></span><code>sudo mkdir -p /acabelloaguilar
 sudo chown -R nobody:nogroup /acabelloaguilar/
 sudo chmod 777 /acabelloaguilar/
 </code></pre></div>
 
-<h1 id="archivo-etcexports">Archivo /etc/exports<a class="headerlink" href="#archivo-etcexports" title="Permanent link">&para;</a></h1>
+<h2 id="archivo-etcexports">Archivo /etc/exports<a class="headerlink" href="#archivo-etcexports" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>/acabelloaguilar 192.168.104.0/24(rw,sync,no_subtree_check,no_root_squash,insecure)
 </code></pre></div>
 
@@ -906,7 +1084,7 @@ sudo chmod 777 /acabelloaguilar/
 sudo systemctl status nfs-server.service
 </code></pre></div>
 
-<h1 id="acceso-desde-cliente-linux">Acceso desde cliente Linux<a class="headerlink" href="#acceso-desde-cliente-linux" title="Permanent link">&para;</a></h1>
+<h2 id="acceso-desde-cliente-linux">Acceso desde cliente Linux<a class="headerlink" href="#acceso-desde-cliente-linux" title="Permanent link">&para;</a></h2>
 <p>Instalación del paquete nfs-common</p>
 <div class="codehilite"><pre><span></span><code>sudo apt install nfs-common
 </code></pre></div>
@@ -920,12 +1098,12 @@ sudo chmod 777 /mnt/nfs -R
 <div class="codehilite"><pre><span></span><code>sudo mount 192.168.104.10:/acabelloaguilar /mnt/nfs/acabelloaguilar
 </code></pre></div>
 
-<h1 id="montaje-automatico-en-linux">Montaje automático en Linux<a class="headerlink" href="#montaje-automatico-en-linux" title="Permanent link">&para;</a></h1>
+<h2 id="montaje-automatico-en-linux">Montaje automático en Linux<a class="headerlink" href="#montaje-automatico-en-linux" title="Permanent link">&para;</a></h2>
 <p>Editando el arhivo /etc/fstab</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">192.168.104.10</span><span class="p">:</span><span class="o">/</span><span class="n">acabelloaguilar</span><span class="w"> </span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">nfs</span><span class="o">/</span><span class="n">acabelloaguilar</span><span class="w"> </span><span class="n">nfs</span><span class="w"> </span><span class="n">auto</span><span class="p">,</span><span class="n">nofail</span><span class="p">,</span><span class="n">noatime</span><span class="p">,</span><span class="n">nolock</span><span class="p">,</span><span class="nb">int</span><span class="n">r</span><span class="p">,</span><span class="n">tcp</span><span class="p">,</span><span class="n">actimeo</span><span class="o">=</span><span class="mf">1800</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="mf">0</span>
 </code></pre></div>
 
-<h1 id="montaje-en-windows">Montaje en Windows<a class="headerlink" href="#montaje-en-windows" title="Permanent link">&para;</a></h1>
+<h2 id="montaje-en-windows">Montaje en Windows<a class="headerlink" href="#montaje-en-windows" title="Permanent link">&para;</a></h2>
 <p>Habilitar Cliente NFS
 <img alt="Opciones NFS Windows" src="../../../assests/images/opciones-nfs-windows.png" />
 Montaje de la carpeta compartida vía CMD</p>
