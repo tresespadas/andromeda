@@ -1233,12 +1233,12 @@ sudo chown acabello:sambashare /samba/cabello-srv
 
 <h2 id="archivo-etcsambasmbconf_1">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf_1" title="Permanent link">&para;</a></h2>
 <p>Nuevo apartado [carpeta-nueva]</p>
-<div class="codehilite"><pre><span></span><code><span class="err">\</span><span class="o">[</span><span class="n">carpeta-nueva\</span><span class="o">]</span>
-<span class="w">  </span><span class="n">force</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0660</span>
-<span class="w">  </span><span class="n">force</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2770</span>
-<span class="w">  </span><span class="k">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">carpeta</span><span class="o">-</span><span class="n">nueva</span>
-<span class="w">  </span><span class="k">read</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">no</span>
-<span class="w">  </span><span class="n">valid</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acabello</span><span class="w"> </span><span class="nv">@sambashare</span>
+<div class="codehilite"><pre><span></span><code><span class="k">[cabello-srv]</span>
+<span class="w">  </span><span class="na">force create mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0660</span>
+<span class="w">  </span><span class="na">force directory mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2770</span>
+<span class="w">  </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/samba/carpeta-nueva</span>
+<span class="w">  </span><span class="na">read only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="w">  </span><span class="na">valid users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">acabello @sambashare</span>
 </code></pre></div>
 
 <p>Comprobación del archivo</p>
