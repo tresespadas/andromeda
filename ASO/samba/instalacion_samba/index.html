@@ -12,31 +12,31 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/pasos_previos/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/samba/instalacion_samba/">
       
       
-        <link rel="prev" href="../../SRI/conectividad/">
+        <link rel="prev" href="../../ldap/configuracion_ldap_cliente/">
       
       
-        <link rel="next" href="../ldap/configuracion_ldap_servidor/">
+        <link rel="next" href="../../nfs/instalacion_nfs/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+      <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Pasos previos - El blog de ASIR</title>
+        <title>Configuración Samba - El blog de ASIR</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pasos-previos" class="md-skip">
+        <a href="#instalacion-y-configuracion-de-samba" class="md-skip">
           Skip to content
         </a>
       
@@ -96,9 +96,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="El blog de ASIR" class="md-header__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+    <a href="../../.." title="El blog de ASIR" class="md-header__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pasos previos
+              Configuración Samba
             
           </span>
         </div>
@@ -202,7 +202,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -223,7 +223,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../SRI/conectividad/" class="md-tabs__link">
+        <a href="../../../SRI/conectividad/" class="md-tabs__link">
           
   
   
@@ -245,7 +245,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../pasos_previos/" class="md-tabs__link">
           
   
   
@@ -265,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Proyecto/fase1/" class="md-tabs__link">
+        <a href="../../../Proyecto/fase1/" class="md-tabs__link">
           
   
   
@@ -299,9 +299,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="El blog de ASIR" class="md-nav__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
+    <a href="../../.." title="El blog de ASIR" class="md-nav__button md-logo" aria-label="El blog de ASIR" data-md-component="logo">
       
-  <img src="../../assets/images/logo.png" alt="logo">
+  <img src="../../../assets/images/logo.png" alt="logo">
 
     </a>
     El blog de ASIR
@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SRI/conectividad/" class="md-nav__link">
+      <a href="../../../SRI/conectividad/" class="md-nav__link">
         
   
   
@@ -482,37 +482,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pasos previos
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../pasos_previos/" class="md-nav__link">
         
   
   
@@ -528,81 +501,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-nuevo-usuario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creación de nuevo usuario
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambio-del-hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cambio del hostname
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprobacion-ips-maquina" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobación IPs máquina
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editar-archivo-de-red-etcnetplan99_configyaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Editar archivo de red /etc/netplan/99_config.yaml
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-hora-y-zona-horaria-de-madrid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configurar la hora y zona horaria de Madrid
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -667,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ldap/configuracion_ldap_servidor/" class="md-nav__link">
+      <a href="../../ldap/configuracion_ldap_servidor/" class="md-nav__link">
         
   
   
@@ -695,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ldap/configuracion_ldap_cliente/" class="md-nav__link">
+      <a href="../../ldap/configuracion_ldap_cliente/" class="md-nav__link">
         
   
   
@@ -728,8 +626,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -738,13 +638,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -765,7 +663,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -780,10 +678,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../samba/instalacion_samba/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Samba
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -799,6 +724,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de paquetes para Samba
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-etcsambasmbconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo /etc/samba/smb.conf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-carpeta-compartida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de la carpeta compartida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-usuario-de-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del usuario de samba
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-etcsambasmbconf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo /etc/samba/smb.conf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinicio-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reinicio del servicio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-el-cliente-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En el cliente Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-el-cliente-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En el cliente Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -871,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nfs/instalacion_nfs/" class="md-nav__link">
+      <a href="../../nfs/instalacion_nfs/" class="md-nav__link">
         
   
   
@@ -966,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Proyecto/fase1/" class="md-nav__link">
+      <a href="../../../Proyecto/fase1/" class="md-nav__link">
         
   
   
@@ -994,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Proyecto/fase2/" class="md-nav__link">
+      <a href="../../../Proyecto/fase2/" class="md-nav__link">
         
   
   
@@ -1049,10 +1082,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-nuevo-usuario" class="md-nav__link">
+  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de nuevo usuario
+        Instalación de paquetes para Samba
       
     </span>
   </a>
@@ -1060,10 +1093,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambio-del-hostname" class="md-nav__link">
+  <a href="#archivo-etcsambasmbconf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cambio del hostname
+        Archivo /etc/samba/smb.conf
       
     </span>
   </a>
@@ -1071,10 +1104,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-ips-maquina" class="md-nav__link">
+  <a href="#creacion-de-la-carpeta-compartida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación IPs máquina
+        Creación de la carpeta compartida
       
     </span>
   </a>
@@ -1082,10 +1115,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editar-archivo-de-red-etcnetplan99_configyaml" class="md-nav__link">
+  <a href="#creacion-del-usuario-de-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Editar archivo de red /etc/netplan/99_config.yaml
+        Creación del usuario de samba
       
     </span>
   </a>
@@ -1093,10 +1126,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-la-hora-y-zona-horaria-de-madrid" class="md-nav__link">
+  <a href="#archivo-etcsambasmbconf_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurar la hora y zona horaria de Madrid
+        Archivo /etc/samba/smb.conf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinicio-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reinicio del servicio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-el-cliente-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En el cliente Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-el-cliente-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En el cliente Windows
       
     </span>
   </a>
@@ -1120,35 +1186,87 @@
 
 
 
-<h1 id="pasos-previos">Pasos previos<a class="headerlink" href="#pasos-previos" title="Permanent link">&para;</a></h1>
-<h2 id="creacion-de-nuevo-usuario">Creación de nuevo usuario<a class="headerlink" href="#creacion-de-nuevo-usuario" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo adduser &lt;nombre&gt;
-sudo usermod -aG sudo,adm &lt;nombre&gt;
+<h1 id="instalacion-y-configuracion-de-samba">Instalación y configuración de Samba<a class="headerlink" href="#instalacion-y-configuracion-de-samba" title="Permanent link">&para;</a></h1>
+<h2 id="instalacion-de-paquetes-para-samba">Instalación de paquetes para Samba<a class="headerlink" href="#instalacion-de-paquetes-para-samba" title="Permanent link">&para;</a></h2>
+<p>En el servidor</p>
+<div class="codehilite"><pre><span></span><code>sudo apt install samba
 </code></pre></div>
 
-<h2 id="cambio-del-hostname">Cambio del hostname<a class="headerlink" href="#cambio-del-hostname" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo hostnamectl set-hostname &lt;hostname&gt;
+<p>Parada de los servicios nmbd y smbd</p>
+<div class="codehilite"><pre><span></span><code>sudo systemctl stop nmbd.service
+sudo systemctl disable nmbd.service
+sudo systemctl stop smbd.service
 </code></pre></div>
 
-<h2 id="comprobacion-ips-maquina">Comprobación IPs máquina<a class="headerlink" href="#comprobacion-ips-maquina" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>ip -br a
+<h2 id="archivo-etcsambasmbconf">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf" title="Permanent link">&para;</a></h2>
+<p>En el apartado [global]</p>
+<div class="codehilite"><pre><span></span><code>bind interfaces only = yes
+interfaces = lo ens19
+smb ports = 445
 </code></pre></div>
 
-<h2 id="editar-archivo-de-red-etcnetplan99_configyaml">Editar archivo de red /etc/netplan/99_config.yaml<a class="headerlink" href="#editar-archivo-de-red-etcnetplan99_configyaml" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">network</span><span class="o">:</span>
-<span class="w">  </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
-<span class="w">  </span><span class="n">renderer</span><span class="o">:</span><span class="w"> </span><span class="n">networkd</span>
-<span class="w">  </span><span class="n">ethernets</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ens18</span><span class="o">:</span>
-<span class="w">      </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="n">ens19</span><span class="o">:</span>
-<span class="w">      </span><span class="n">addresses</span><span class="o">:</span>
-<span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="mf">192.168</span><span class="o">.</span><span class="mf">104.10</span><span class="o">/</span><span class="mi">24</span>
+<p>Comprobación del archivo</p>
+<div class="codehilite"><pre><span></span><code>testparm
 </code></pre></div>
 
-<h2 id="configurar-la-hora-y-zona-horaria-de-madrid">Configurar la hora y zona horaria de Madrid<a class="headerlink" href="#configurar-la-hora-y-zona-horaria-de-madrid" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo timedatectl set-timezone &quot;Europe/Madrid&quot;
+<h2 id="creacion-de-la-carpeta-compartida">Creación de la carpeta compartida<a class="headerlink" href="#creacion-de-la-carpeta-compartida" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo mkdir -p /samba/cabello-srv
 </code></pre></div>
+
+<p>Grupos de la carpeta</p>
+<div class="codehilite"><pre><span></span><code>sudo chown :sambashare /samba/
+sudo chown acabello:sambashare /samba/cabello-srv
+</code></pre></div>
+
+<p>Permisos de la carpeta</p>
+<div class="codehilite"><pre><span></span><code>sudo chmod 2770 /samba/cabello-srv
+</code></pre></div>
+
+<h2 id="creacion-del-usuario-de-samba">Creación del usuario de samba<a class="headerlink" href="#creacion-del-usuario-de-samba" title="Permanent link">&para;</a></h2>
+<p>Creación del usuario de Samba</p>
+<div class="codehilite"><pre><span></span><code>sudo smbpasswd -a acabello
+</code></pre></div>
+
+<p>Habilitar el usuario de Samba</p>
+<div class="codehilite"><pre><span></span><code>sudo smbpasswd -e acabello
+</code></pre></div>
+
+<h2 id="archivo-etcsambasmbconf_1">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf_1" title="Permanent link">&para;</a></h2>
+<p>Nuevo apartado [carpeta-nueva]</p>
+<div class="codehilite"><pre><span></span><code><span class="err">\</span><span class="o">[</span><span class="n">carpeta-nueva\</span><span class="o">]</span>
+<span class="w">  </span><span class="n">force</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0660</span>
+<span class="w">  </span><span class="n">force</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2770</span>
+<span class="w">  </span><span class="k">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">carpeta</span><span class="o">-</span><span class="n">nueva</span>
+<span class="w">  </span><span class="k">read</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">no</span>
+<span class="w">  </span><span class="n">valid</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acabello</span><span class="w"> </span><span class="nv">@sambashare</span>
+</code></pre></div>
+
+<p>Comprobación del archivo</p>
+<div class="codehilite"><pre><span></span><code>testparm
+</code></pre></div>
+
+<h2 id="reinicio-del-servicio">Reinicio del servicio<a class="headerlink" href="#reinicio-del-servicio" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo systemctl start smbd.service
+</code></pre></div>
+
+<h2 id="en-el-cliente-linux">En el cliente Linux<a class="headerlink" href="#en-el-cliente-linux" title="Permanent link">&para;</a></h2>
+<p>Instalación de paquetes</p>
+<div class="codehilite"><pre><span></span><code>sudo apt update
+sudo apt install smbclient
+</code></pre></div>
+
+<p>Conexión con la carpeta compartida</p>
+<div class="codehilite"><pre><span></span><code>smbclient //192.168.101.10/cabello-srv -U acabello
+</code></pre></div>
+
+<p>Comandos para descargar/subir archivos</p>
+<div class="codehilite"><pre><span></span><code>get archivo.txt
+put archivo.txt
+</code></pre></div>
+
+<h2 id="en-el-cliente-windows">En el cliente Windows<a class="headerlink" href="#en-el-cliente-windows" title="Permanent link">&para;</a></h2>
+<p>Añadir una ubicación de red
+<img alt="Ubicación de red en Windows" src="../../../assests/images/cliente_windows_01.png" /></p>
 
 
 
@@ -1204,10 +1322,10 @@ sudo usermod -aG sudo,adm &lt;nombre&gt;
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
