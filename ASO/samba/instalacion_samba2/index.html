@@ -12,13 +12,13 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/samba/instalacion_samba/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/samba/instalacion_samba2/">
       
       
-        <link rel="prev" href="../../ldap/configuracion_ldap_cliente/">
+        <link rel="prev" href="../instalacion_samba/">
       
       
-        <link rel="next" href="../instalacion_samba2/">
+        <link rel="next" href="../../nfs/instalacion_nfs/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Configuración Samba desde Ubuntu Server - El blog de ASIR</title>
+        <title>Configuración Samba desde Ubuntu Desktop - El blog de ASIR</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-y-configuracion-de-samba-desde-ubuntu-server" class="md-skip">
+        <a href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuración Samba desde Ubuntu Server
+              Configuración Samba desde Ubuntu Desktop
             
           </span>
         </div>
@@ -678,6 +678,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion_samba/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Samba desde Ubuntu Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -697,7 +725,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración Samba desde Ubuntu Server
+    Configuración Samba desde Ubuntu Desktop
   
 
     
@@ -715,7 +743,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración Samba desde Ubuntu Server
+    Configuración Samba desde Ubuntu Desktop
   
 
     
@@ -752,10 +780,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-etcsambasmbconf" class="md-nav__link">
+  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivo /etc/samba/smb.conf
+        Creación de usuario de Samba
       
     </span>
   </a>
@@ -763,10 +791,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-compartida" class="md-nav__link">
+  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de la carpeta compartida
+        Creación de la carpeta y permisos
       
     </span>
   </a>
@@ -774,10 +802,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-del-usuario-de-samba" class="md-nav__link">
+  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación del usuario de samba
+        Añadir al grupo sambashare
       
     </span>
   </a>
@@ -785,10 +813,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-etcsambasmbconf_1" class="md-nav__link">
+  <a href="#reinicio-del-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivo /etc/samba/smb.conf
+        Reinicio del sistema
       
     </span>
   </a>
@@ -796,10 +824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reinicio-del-servicio" class="md-nav__link">
+  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reinicio del servicio
+        Compartición de la carpeta de Samba
       
     </span>
   </a>
@@ -807,10 +835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-el-cliente-linux" class="md-nav__link">
+  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        En el cliente Linux
+        Conexión desde una máquina Linux
       
     </span>
   </a>
@@ -818,10 +846,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-el-cliente-windows" class="md-nav__link">
+  <a href="#conexion-desde-una-maquina-linux_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        En el cliente Windows
+        Conexión desde una máquina Linux
       
     </span>
   </a>
@@ -832,34 +860,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../instalacion_samba2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuración Samba desde Ubuntu Desktop
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1121,10 +1121,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-etcsambasmbconf" class="md-nav__link">
+  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivo /etc/samba/smb.conf
+        Creación de usuario de Samba
       
     </span>
   </a>
@@ -1132,10 +1132,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-compartida" class="md-nav__link">
+  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de la carpeta compartida
+        Creación de la carpeta y permisos
       
     </span>
   </a>
@@ -1143,10 +1143,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-del-usuario-de-samba" class="md-nav__link">
+  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación del usuario de samba
+        Añadir al grupo sambashare
       
     </span>
   </a>
@@ -1154,10 +1154,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-etcsambasmbconf_1" class="md-nav__link">
+  <a href="#reinicio-del-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivo /etc/samba/smb.conf
+        Reinicio del sistema
       
     </span>
   </a>
@@ -1165,10 +1165,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reinicio-del-servicio" class="md-nav__link">
+  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reinicio del servicio
+        Compartición de la carpeta de Samba
       
     </span>
   </a>
@@ -1176,10 +1176,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-el-cliente-linux" class="md-nav__link">
+  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        En el cliente Linux
+        Conexión desde una máquina Linux
       
     </span>
   </a>
@@ -1187,10 +1187,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-el-cliente-windows" class="md-nav__link">
+  <a href="#conexion-desde-una-maquina-linux_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        En el cliente Windows
+        Conexión desde una máquina Linux
       
     </span>
   </a>
@@ -1214,87 +1214,39 @@
 
 
 
-<h1 id="instalacion-y-configuracion-de-samba-desde-ubuntu-server">Instalación y configuración de Samba desde Ubuntu Server<a class="headerlink" href="#instalacion-y-configuracion-de-samba-desde-ubuntu-server" title="Permanent link">&para;</a></h1>
+<h1 id="instalacion-y-configuracion-de-samba-desde-ubuntu-desktop">Instalación y configuración de Samba desde Ubuntu Desktop<a class="headerlink" href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" title="Permanent link">&para;</a></h1>
 <h2 id="instalacion-de-paquetes-para-samba">Instalación de paquetes para Samba<a class="headerlink" href="#instalacion-de-paquetes-para-samba" title="Permanent link">&para;</a></h2>
 <p>En el servidor</p>
 <div class="codehilite"><pre><span></span><code>sudo apt install samba
 </code></pre></div>
 
-<p>Parada de los servicios nmbd y smbd</p>
-<div class="codehilite"><pre><span></span><code>sudo systemctl stop nmbd.service
-sudo systemctl disable nmbd.service
-sudo systemctl stop smbd.service
-</code></pre></div>
-
-<h2 id="archivo-etcsambasmbconf">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf" title="Permanent link">&para;</a></h2>
-<p>En el apartado [global]</p>
-<div class="codehilite"><pre><span></span><code>bind interfaces only = yes
-interfaces = lo ens19
-smb ports = 445
-</code></pre></div>
-
-<p>Comprobación del archivo</p>
-<div class="codehilite"><pre><span></span><code>testparm
-</code></pre></div>
-
-<h2 id="creacion-de-la-carpeta-compartida">Creación de la carpeta compartida<a class="headerlink" href="#creacion-de-la-carpeta-compartida" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo mkdir -p /samba/cabello-srv
-</code></pre></div>
-
-<p>Grupos de la carpeta</p>
-<div class="codehilite"><pre><span></span><code>sudo chown :sambashare /samba/
-sudo chown acabello:sambashare /samba/cabello-srv
-</code></pre></div>
-
-<p>Permisos de la carpeta</p>
-<div class="codehilite"><pre><span></span><code>sudo chmod 2770 /samba/cabello-srv
-</code></pre></div>
-
-<h2 id="creacion-del-usuario-de-samba">Creación del usuario de samba<a class="headerlink" href="#creacion-del-usuario-de-samba" title="Permanent link">&para;</a></h2>
-<p>Creación del usuario de Samba</p>
+<h2 id="creacion-de-usuario-de-samba">Creación de usuario de Samba<a class="headerlink" href="#creacion-de-usuario-de-samba" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>sudo smbpasswd -a acabello
+sudo smbpasswd -e acabello
 </code></pre></div>
 
-<p>Habilitar el usuario de Samba</p>
-<div class="codehilite"><pre><span></span><code>sudo smbpasswd -e acabello
+<h2 id="creacion-de-la-carpeta-y-permisos">Creación de la carpeta y permisos<a class="headerlink" href="#creacion-de-la-carpeta-y-permisos" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo mkdir -p /aguilar-dktp
+sudo chown acabello:sambashare -R /aguilar-dktp
 </code></pre></div>
 
-<h2 id="archivo-etcsambasmbconf_1">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf_1" title="Permanent link">&para;</a></h2>
-<p>Nuevo apartado [carpeta-nueva]</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[cabello-srv]</span>
-<span class="w">  </span><span class="na">force create mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0660</span>
-<span class="w">  </span><span class="na">force directory mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2770</span>
-<span class="w">  </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/samba/carpeta-nueva</span>
-<span class="w">  </span><span class="na">read only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
-<span class="w">  </span><span class="na">valid users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">acabello @sambashare</span>
+<h2 id="anadir-al-grupo-sambashare">Añadir al grupo sambashare<a class="headerlink" href="#anadir-al-grupo-sambashare" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo usermod -aG sambashare acabello
 </code></pre></div>
 
-<p>Comprobación del archivo</p>
-<div class="codehilite"><pre><span></span><code>testparm
+<h2 id="reinicio-del-sistema">Reinicio del sistema<a class="headerlink" href="#reinicio-del-sistema" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>sudo reboot
 </code></pre></div>
 
-<h2 id="reinicio-del-servicio">Reinicio del servicio<a class="headerlink" href="#reinicio-del-servicio" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo systemctl start smbd.service
+<h2 id="comparticion-de-la-carpeta-de-samba">Compartición de la carpeta de Samba<a class="headerlink" href="#comparticion-de-la-carpeta-de-samba" title="Permanent link">&para;</a></h2>
+<p><img alt="Compartición de carpeta" src="../../../assests/images/samba_parte2_comparticion" />
+Posteriormente añadimos los permisos automáticamente</p>
+<h2 id="conexion-desde-una-maquina-linux">Conexión desde una máquina Linux<a class="headerlink" href="#conexion-desde-una-maquina-linux" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>smbclient //192.168.104.11/aguilar-dktp
 </code></pre></div>
 
-<h2 id="en-el-cliente-linux">En el cliente Linux<a class="headerlink" href="#en-el-cliente-linux" title="Permanent link">&para;</a></h2>
-<p>Instalación de paquetes</p>
-<div class="codehilite"><pre><span></span><code>sudo apt update
-sudo apt install smbclient
-</code></pre></div>
-
-<p>Conexión con la carpeta compartida</p>
-<div class="codehilite"><pre><span></span><code>smbclient //192.168.101.10/cabello-srv -U acabello
-</code></pre></div>
-
-<p>Comandos para descargar/subir archivos</p>
-<div class="codehilite"><pre><span></span><code>get archivo.txt
-put archivo.txt
-</code></pre></div>
-
-<h2 id="en-el-cliente-windows">En el cliente Windows<a class="headerlink" href="#en-el-cliente-windows" title="Permanent link">&para;</a></h2>
-<p>Añadir una ubicación de red
-<img alt="Ubicación de red en Windows" src="../../../assests/images/cliente_windows_01.png" /></p>
+<h2 id="conexion-desde-una-maquina-linux_1">Conexión desde una máquina Linux<a class="headerlink" href="#conexion-desde-una-maquina-linux_1" title="Permanent link">&para;</a></h2>
+<p><img alt="Conexión desde Windows" src="../../../assests/images/samba_parte2_conexion_w10.png" /></p>
 
 
 

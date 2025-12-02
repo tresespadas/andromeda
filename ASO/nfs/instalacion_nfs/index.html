@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/nfs/instalacion_nfs/">
       
       
-        <link rel="prev" href="../../samba/instalacion_samba/">
+        <link rel="prev" href="../../samba/instalacion_samba2/">
       
       
         <link rel="next" href="../../../Proyecto/fase1/">
@@ -688,7 +688,35 @@
   <span class="md-ellipsis">
     
   
-    Configuración Samba
+    Configuración Samba desde Ubuntu Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../samba/instalacion_samba2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Samba desde Ubuntu Desktop
   
 
     
@@ -1160,7 +1188,7 @@ sudo chmod 777 /acabelloaguilar/
 </code></pre></div>
 
 <h2 id="archivo-etcexports">Archivo /etc/exports<a class="headerlink" href="#archivo-etcexports" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>/acabelloaguilar 192.168.104.0/24(rw,sync,no_subtree_check,no_root_squash,insecure)
+<div class="codehilite"><pre><span></span><code>/acabelloaguilar 192.168.104.0/24(rw,sync,no_subtree_check)
 </code></pre></div>
 
 <p>Comprobación del archivo /etc/exports</p>
@@ -1195,8 +1223,7 @@ sudo chmod 777 /mnt/nfs -R
 <p>Habilitar Cliente NFS
 <img alt="Opciones NFS Windows" src="../../../assests/images/opciones-nfs-windows.png" /></p>
 <p>Montaje de la carpeta compartida vía CMD</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">mount</span><span class="w"> </span><span class="o">-</span><span class="nx">o</span><span class="w"> </span><span class="nx">mtype</span><span class="p">=</span><span class="nx">hard</span><span class="p">,</span><span class="nx">rw</span><span class="w"> </span><span class="err">\\</span><span class="m m-Double">192.168.104.10</span><span class="err">\</span><span class="nx">acabelloaguilar</span><span class="w"> </span><span class="nx">X</span><span class="p">:</span>
-<span class="nx">mount</span><span class="w"> </span><span class="o">-</span><span class="nx">o</span><span class="w"> </span><span class="nx">anon</span><span class="w"> </span><span class="m m-Double">192.168.104.10</span><span class="p">:</span><span class="o">/</span><span class="nx">home</span><span class="w"> </span><span class="nx">Y</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code>mount \\192.168.104.10\acabelloaguilar Y:
 </code></pre></div>
 
 
