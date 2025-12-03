@@ -1220,12 +1220,6 @@
 <div class="codehilite"><pre><span></span><code>sudo apt install samba
 </code></pre></div>
 
-<p>Parada de los servicios nmbd y smbd</p>
-<div class="codehilite"><pre><span></span><code>sudo systemctl stop nmbd.service
-sudo systemctl disable nmbd.service
-sudo systemctl stop smbd.service
-</code></pre></div>
-
 <h2 id="archivo-etcsambasmbconf">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf" title="Permanent link">&para;</a></h2>
 <p>En el apartado [global]</p>
 <div class="codehilite"><pre><span></span><code>bind interfaces only = yes
@@ -1283,7 +1277,7 @@ sudo chown acabello:sambashare /samba/cabello-srv
 sudo apt install smbclient
 </code></pre></div>
 
-<p>Conexión con la carpeta compartida</p>
+<p>Conexión con la carpeta compartida (también se puede gráficamente)</p>
 <div class="codehilite"><pre><span></span><code>smbclient //192.168.101.10/cabello-srv -U acabello
 </code></pre></div>
 
