@@ -1256,10 +1256,12 @@ sudo chown acabello:sambashare /samba/cabello-srv
 <h2 id="archivo-etcsambasmbconf_1">Archivo /etc/samba/smb.conf<a class="headerlink" href="#archivo-etcsambasmbconf_1" title="Permanent link">&para;</a></h2>
 <p>Nuevo apartado [carpeta-nueva]</p>
 <div class="codehilite"><pre><span></span><code><span class="k">[cabello-srv]</span>
-<span class="w">  </span><span class="na">force create mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0660</span>
-<span class="w">  </span><span class="na">force directory mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2770</span>
+<span class="w">  </span><span class="na">create mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0660</span>
+<span class="w">  </span><span class="na">directory mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2770</span>
 <span class="w">  </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/samba/carpeta-nueva</span>
 <span class="w">  </span><span class="na">read only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="w">  </span><span class="na">browseable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">  </span><span class="na">writeable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="w">  </span><span class="na">valid users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">acabello @sambashare</span>
 </code></pre></div>
 
