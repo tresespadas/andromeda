@@ -26,6 +26,11 @@ nav:
   - Home: index.md
   - SRI:
       - Conectividad entre máquinas: SRI/conectividad.md
+      - Proxmox:
+        - Prerrequisitos: SRI/proxmox/prerequisitos.md
+        - Cluster: SRI/proxmox/cluster.md
+        - NAS: SRI/proxmox/nas.md
+        - HA: SRI/proxmox/alta_disponibilidad.md
   - ASO:
       - Pasos previos: ASO/pasos_previos.md
       - LDAP:
