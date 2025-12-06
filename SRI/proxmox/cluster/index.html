@@ -25,7 +25,7 @@
     
     
       
-        <title>Creación del cluster - El blog de ASIR</title>
+        <title>Cluster Proxmox - El blog de ASIR</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creacion-del-cluster" class="md-skip">
+        <a href="#cluster-proxmox" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creación del cluster
+              Cluster Proxmox
             
           </span>
         </div>
@@ -461,6 +461,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerrequisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1047,6 +1075,114 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del cluster
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-al-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unión al cluster
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importacion-de-maquinas-y-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importación de máquinas y contenedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importación de máquinas y contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-punto-de-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del punto de montaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación del punto de montaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-puntos-de-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación de puntos de montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-directorio-para-realizar-el-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de directorio para realizar el montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-de-sde1-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje de sde1 en local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiado-de-maquinascontenedores-al-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copiado de máquinas/contenedores al almacenamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1062,7 +1198,48 @@
 
 
 
-<h1 id="creacion-del-cluster">Creación del cluster<a class="headerlink" href="#creacion-del-cluster" title="Permanent link">&para;</a></h1>
+<h1 id="cluster-proxmox">Cluster Proxmox<a class="headerlink" href="#cluster-proxmox" title="Permanent link">&para;</a></h1>
+<h2 id="creacion-del-cluster">Creación del cluster<a class="headerlink" href="#creacion-del-cluster" title="Permanent link">&para;</a></h2>
+<p>Datacenter &gt; Cluster &gt; Create Cluster
+Link de la foto</p>
+<h2 id="union-al-cluster">Unión al cluster<a class="headerlink" href="#union-al-cluster" title="Permanent link">&para;</a></h2>
+<p>Datacenter &gt; Cluster &gt; Join Information
+Link de la foto
+Datacenter &gt; Cluster &gt; Join Cluster
+Importante: Establecer la red interna del cluster y la contraseña del nodo del cluster
+Link de la foto</p>
+<h2 id="importacion-de-maquinas-y-contenedores">Importación de máquinas y contenedores<a class="headerlink" href="#importacion-de-maquinas-y-contenedores" title="Permanent link">&para;</a></h2>
+<h3 id="creacion-del-punto-de-montaje">Creación del punto de montaje<a class="headerlink" href="#creacion-del-punto-de-montaje" title="Permanent link">&para;</a></h3>
+<p>Válido para cualquier nodo</p>
+<h4 id="comprobacion-de-puntos-de-montaje">Comprobación de puntos de montaje<a class="headerlink" href="#comprobacion-de-puntos-de-montaje" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>lsblk -l
+</code></pre></div>
+
+<h4 id="creacion-de-directorio-para-realizar-el-montaje">Creación de directorio para realizar el montaje<a class="headerlink" href="#creacion-de-directorio-para-realizar-el-montaje" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>mkdir /media/sde1
+</code></pre></div>
+
+<h4 id="montaje-de-sde1-en-local">Montaje de sde1 en local<a class="headerlink" href="#montaje-de-sde1-en-local" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>mount -t auto /dev/sde1 /media/sde1/
+</code></pre></div>
+
+<h3 id="copiado-de-maquinascontenedores-al-almacenamiento">Copiado de máquinas/contenedores al almacenamiento<a class="headerlink" href="#copiado-de-maquinascontenedores-al-almacenamiento" title="Permanent link">&para;</a></h3>
+<p>En el caso de usar almacenamiento local, la ruta es /var/lib/vz/dump/. Dependiento del almacenamiento destino (Directory,ZFS,...) la ruta dependerá del montaje realizado previamente</p>
+<div class="codehilite"><pre><span></span><code><span class="n">cp</span><span class="w"> </span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">sde1</span><span class="o">/</span><span class="n">BCKmvs</span><span class="o">/</span><span class="n">vzdump</span><span class="o">-</span><span class="n">qemu</span><span class="o">-</span><span class="mi">103</span><span class="o">-*</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">vz</span><span class="o">/</span><span class="n">dump</span><span class="o">/</span>
+</code></pre></div>
+
+<p>Importante: Las máquinas/contenedores disponibles
+102: Ubuntu22T
+103: Debian12T
+104: BLBeryllium
+105: Proxmox822
+106: Bodhi7
+107: Win10
+108: WinServer2022
+114: WinServer2019
+115: Win10MiniOS
+116: Ubuntu24
+117: CentOS</p>
 
 
 
