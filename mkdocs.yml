@@ -31,6 +31,11 @@ nav:
       - LDAP:
         - Configuración LDAP Servidor: ASO/ldap/configuracion_ldap_servidor.md
         - Configuración LDAP Cliente: ASO/ldap/configuracion_ldap_cliente.md
+      - Samba:
+        - Configuración Samba desde Ubuntu Server: ASO/samba/instalacion_samba.md
+        - Configuración Samba desde Ubuntu Desktop: ASO/samba/instalacion_samba2.md
+      - NFS:
+        - Configuración NFS: ASO/nfs/instalacion_nfs.md
   - Proyecto:
       - Fase 1: Proyecto/fase1.md
       - Fase 2: Proyecto/fase2.md
