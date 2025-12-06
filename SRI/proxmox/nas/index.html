@@ -1261,44 +1261,44 @@
 <li>Creación de una nueva red para el NAS</li>
 <li>Particionado de disco</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>cfdisk /dev/sdb
+<div class="codehilite"><pre><span></span><code>cfdisk<span class="w"> </span>/dev/sdb
 </code></pre></div>
 
 <ol>
 <li>Formateado de la partición</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>mkfs -t ext4 -L &quot;hdNFS&quot; /dev/sdb1
+<div class="codehilite"><pre><span></span><code>mkfs<span class="w"> </span>-t<span class="w"> </span>ext4<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;hdNFS&quot;</span><span class="w"> </span>/dev/sdb1
 </code></pre></div>
 
 <ol>
 <li>Creación de punto de montaje y montaje</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>mkdir -p /media/hdNFS
-mount -t auto /dev/sdb1 /media/hdNFS/
+<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/media/hdNFS
+mount<span class="w"> </span>-t<span class="w"> </span>auto<span class="w"> </span>/dev/sdb1<span class="w"> </span>/media/hdNFS/
 </code></pre></div>
 
 <ol>
 <li>Instalación de paquetes</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>apt install nfs-kernel-server
+<div class="codehilite"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>nfs-kernel-server
 </code></pre></div>
 
 <ol>
 <li>Edición del /etc/exports</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>/media/hdNFS 10.200.0.0/24(rw,sync,no_subtree_check)
+<div class="codehilite"><pre><span></span><code>/media/hdNFS<span class="w"> </span><span class="m">10</span>.200.0.0/24<span class="o">(</span>rw,sync,no_subtree_check<span class="o">)</span>
 </code></pre></div>
 
 <ol>
 <li>Reinicio del demonio</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="n">exportfs</span><span class="w"> </span><span class="o">-</span><span class="n">av</span>
+<div class="codehilite"><pre><span></span><code>exportfs<span class="w"> </span>-av
 </code></pre></div>
 
 <ol>
 <li>Permisos de la carpeta</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>chmod 777 /media/hdNFS -R
+<div class="codehilite"><pre><span></span><code>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/media/hdNFS<span class="w"> </span>-R
 </code></pre></div>
 
 <h2 id="en-el-cluster">En el cluster<a class="headerlink" href="#en-el-cluster" title="Permanent link">&para;</a></h2>
