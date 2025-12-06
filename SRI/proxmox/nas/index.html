@@ -1256,54 +1256,48 @@
 
 <h1 id="nas-via-nfs">NAS vía NFS<a class="headerlink" href="#nas-via-nfs" title="Permanent link">&para;</a></h1>
 <h2 id="maquina-dedicada-al-nas">Máquina dedicada al NAS<a class="headerlink" href="#maquina-dedicada-al-nas" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Nueva máquina para el NAS</p>
-</li>
-<li>
-<p>Creación de una nueva red para el NAS</p>
-</li>
-<li>
-<p>Particionado de disco</p>
-</li>
-</ol>
+<ul>
+<li>Nueva máquina para el NAS</li>
+<li>Creación de una nueva red para el NAS</li>
+<li>Particionado de disco</li>
+</ul>
 <div class="codehilite"><pre><span></span><code>cfdisk<span class="w"> </span>/dev/sdb
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Formateado de la partición</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>mkfs<span class="w"> </span>-t<span class="w"> </span>ext4<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;hdNFS&quot;</span><span class="w"> </span>/dev/sdb1
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Creación de punto de montaje y montaje</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/media/hdNFS
 mount<span class="w"> </span>-t<span class="w"> </span>auto<span class="w"> </span>/dev/sdb1<span class="w"> </span>/media/hdNFS/
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Instalación de paquetes</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>nfs-kernel-server
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Edición del /etc/exports</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>/media/hdNFS<span class="w"> </span><span class="m">10</span>.200.0.0/24<span class="o">(</span>rw,sync,no_subtree_check<span class="o">)</span>
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Reinicio del demonio</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>exportfs<span class="w"> </span>-av
 </code></pre></div>
 
-<ol>
+<ul>
 <li>Permisos de la carpeta</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/media/hdNFS<span class="w"> </span>-R
 </code></pre></div>
 
