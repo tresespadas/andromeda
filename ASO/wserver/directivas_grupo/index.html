@@ -12,13 +12,13 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/samba/instalacion_samba2/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/wserver/directivas_grupo/">
       
       
-        <link rel="prev" href="../instalacion_samba/">
+        <link rel="prev" href="../perfiles_moviles/">
       
       
-        <link rel="next" href="../../nfs/instalacion_nfs/">
+        <link rel="next" href="../../../Proyecto/fase1/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Configuración Samba desde Ubuntu Desktop - El blog de ASIR</title>
+        <title>Directivas de grupo - El blog de ASIR</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" class="md-skip">
+        <a href="#directivas-de-grupo" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuración Samba desde Ubuntu Desktop
+              Directivas de grupo
             
           </span>
         </div>
@@ -798,8 +798,6 @@
                 
   
   
-    
-  
   
   
     
@@ -810,11 +808,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -835,7 +835,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -853,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instalacion_samba/" class="md-nav__link">
+      <a href="../../samba/instalacion_samba/" class="md-nav__link">
         
   
   
@@ -878,37 +878,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuración Samba desde Ubuntu Desktop
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../samba/instalacion_samba2/" class="md-nav__link">
         
   
   
@@ -924,114 +897,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instalación de paquetes para Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creación de usuario de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creación de la carpeta y permisos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Añadir al grupo sambashare
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reinicio-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reinicio del sistema
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compartición de la carpeta de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Windows
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1137,8 +1002,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1147,13 +1014,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -1174,7 +1039,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1192,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/instalacion_configuracion_dominio_ad/" class="md-nav__link">
+      <a href="../instalacion_configuracion_dominio_ad/" class="md-nav__link">
         
   
   
@@ -1220,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/gestionar_usuarios_grupos_uo/" class="md-nav__link">
+      <a href="../gestionar_usuarios_grupos_uo/" class="md-nav__link">
         
   
   
@@ -1248,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/perfiles_moviles/" class="md-nav__link">
+      <a href="../perfiles_moviles/" class="md-nav__link">
         
   
   
@@ -1273,10 +1138,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../wserver/directivas_grupo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directivas de grupo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1292,6 +1184,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#carpeta-compartida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carpeta compartida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear GPO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vincular-gpo-a-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vincular GPO a Objeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1454,10 +1399,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
+  <a href="#carpeta-compartida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Instalación de paquetes para Samba
+        Carpeta compartida
       
     </span>
   </a>
@@ -1465,10 +1410,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
+  <a href="#crear-gpo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de usuario de Samba
+        Crear GPO
       
     </span>
   </a>
@@ -1476,65 +1421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
+  <a href="#vincular-gpo-a-objeto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de la carpeta y permisos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Añadir al grupo sambashare
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reinicio-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reinicio del sistema
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compartición de la carpeta de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Windows
+        Vincular GPO a Objeto
       
     </span>
   </a>
@@ -1558,36 +1448,32 @@
 
 
 
-<h1 id="instalacion-y-configuracion-de-samba-desde-ubuntu-desktop">Instalación y configuración de Samba desde Ubuntu Desktop<a class="headerlink" href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" title="Permanent link">&para;</a></h1>
-<h2 id="instalacion-de-paquetes-para-samba">Instalación de paquetes para Samba<a class="headerlink" href="#instalacion-de-paquetes-para-samba" title="Permanent link">&para;</a></h2>
-<p>En el servidor Samba se instala gráficamente</p>
-<h2 id="creacion-de-usuario-de-samba">Creación de usuario de Samba<a class="headerlink" href="#creacion-de-usuario-de-samba" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo smbpasswd -a acabello
-sudo smbpasswd -e acabello
-</code></pre></div>
-
-<h2 id="creacion-de-la-carpeta-y-permisos">Creación de la carpeta y permisos<a class="headerlink" href="#creacion-de-la-carpeta-y-permisos" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo mkdir -p /aguilar-dktp
-sudo chown acabello:sambashare -R /aguilar-dktp
-</code></pre></div>
-
-<h2 id="anadir-al-grupo-sambashare">Añadir al grupo sambashare<a class="headerlink" href="#anadir-al-grupo-sambashare" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo usermod -aG sambashare acabello
-</code></pre></div>
-
-<h2 id="reinicio-del-sistema">Reinicio del sistema<a class="headerlink" href="#reinicio-del-sistema" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo reboot
-</code></pre></div>
-
-<h2 id="comparticion-de-la-carpeta-de-samba">Compartición de la carpeta de Samba<a class="headerlink" href="#comparticion-de-la-carpeta-de-samba" title="Permanent link">&para;</a></h2>
-<p><img alt="Compartición de carpeta" src="../../../assests/images/samba_parte2_comparticion" />
-Posteriormente añadimos los permisos automáticamente</p>
-<h2 id="conexion-desde-una-maquina-linux">Conexión desde una máquina Linux<a class="headerlink" href="#conexion-desde-una-maquina-linux" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>smbclient //192.168.104.11/aguilar-dktp
-</code></pre></div>
-
-<h2 id="conexion-desde-una-maquina-windows">Conexión desde una máquina Windows<a class="headerlink" href="#conexion-desde-una-maquina-windows" title="Permanent link">&para;</a></h2>
-<p><img alt="Conexión desde Windows" src="../../../assests/images/samba_parte2_conexion_w10.png" /></p>
+<h1 id="directivas-de-grupo">Directivas de grupo<a class="headerlink" href="#directivas-de-grupo" title="Permanent link">&para;</a></h1>
+<h2 id="carpeta-compartida">Carpeta compartida<a class="headerlink" href="#carpeta-compartida" title="Permanent link">&para;</a></h2>
+<p>Para esta GPO es necesario antes un carpeta compartida donde se alojará el fondo de escritorio. Para ello, se creará una en E:\ 
+Botón derecho &gt; Compartir &gt; Uso compartido avanzado
+<img alt="Compartir carpeta 1" src="../../../assests/images/aso/ud6/act5/compartir_carpeta_1.png" />
+<img alt="Compartir carpeta 2" src="../../../assests/images/aso/ud6/act5/compartir_carpeta_2.png" />
+<img alt="Compartir carpeta 3" src="../../../assests/images/aso/ud6/act5/compartir_carpeta_3.png" />
+<img alt="Compartir carpeta 4" src="../../../assests/images/aso/ud6/act5/compartir_carpeta_4.png" /></p>
+<h2 id="crear-gpo">Crear GPO<a class="headerlink" href="#crear-gpo" title="Permanent link">&para;</a></h2>
+<p>Herramientas &gt; Administración de directivas de grupo &gt; Bosque &gt; Dominio &gt; Objetos de directiva de grupo &gt; Botón derecho &gt; Nuevo
+<img alt="GPO 1" src="../../../assests/images/aso/ud6/act5/gpo_1.png" />
+<img alt="GPO 2" src="../../../assests/images/aso/ud6/act5/gpo_2.png" />
+Una vez creada, se editará para seleccionar la GPO correspondiente al fondo de pantalla.
+Configuración de usuario &gt; Directivas &gt; Plantillas administravias &gt; Active Desktop &gt; Active Desktop &gt; Tapiz de escritorio
+<img alt="GPO 3" src="../../../assests/images/aso/ud6/act5/gpo_3.png" />
+<img alt="Tapiz de escritorio 1" src="../../../assests/images/aso/ud6/act5/tapiz_escritorio_1.png" />
+<img alt="Tapiz de escritorio 2" src="../../../assests/images/aso/ud6/act5/tapiz_escritorio_2.png" />
+Como también se requiere que el usuario no pueda realizar cambios, se habilitará la GPO "No permitir cambios"
+<img alt="No changes" src="../../../assests/images/aso/ud6/act5/no_cambios.png" />
+<img alt="No changes 2" src="../../../assests/images/aso/ud6/act5/no_cambios_2.png" /></p>
+<h2 id="vincular-gpo-a-objeto">Vincular GPO a Objeto<a class="headerlink" href="#vincular-gpo-a-objeto" title="Permanent link">&para;</a></h2>
+<p>En este caso asignaremos la GPO a la unidad organizativa. Botón derecho &gt; Vincular GPO existente...
+<img alt="Vincular GPO 1" src="../../../assests/images/aso/ud6/act5/vincular_gpo_1.png" />
+<img alt="Vincular GPO 2" src="../../../assests/images/aso/ud6/act5/vincular_gpo_2.png" />
+A continuación, en el servidor, se ejecutará "gpupdate /force" para actualizar las GPOs
+<img alt="Actualizar GPO" src="../../../assests/images/aso/ud6/act5/actualizar_gpo.png" /></p>
 
 
 

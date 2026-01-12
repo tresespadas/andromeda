@@ -12,13 +12,13 @@
         <meta name="author" content="Álvaro">
       
       
-        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/samba/instalacion_samba2/">
+        <link rel="canonical" href="https://tresespadas.github.io/andromeda/ASO/wserver/perfiles_moviles/">
       
       
-        <link rel="prev" href="../instalacion_samba/">
+        <link rel="prev" href="../gestionar_usuarios_grupos_uo/">
       
       
-        <link rel="next" href="../../nfs/instalacion_nfs/">
+        <link rel="next" href="../directivas_grupo/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Configuración Samba desde Ubuntu Desktop - El blog de ASIR</title>
+        <title>Perfiles móviles - El blog de ASIR</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" class="md-skip">
+        <a href="#configuracion-de-perfiles-moviles" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuración Samba desde Ubuntu Desktop
+              Perfiles móviles
             
           </span>
         </div>
@@ -798,8 +798,6 @@
                 
   
   
-    
-  
   
   
     
@@ -810,11 +808,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -835,7 +835,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -853,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instalacion_samba/" class="md-nav__link">
+      <a href="../../samba/instalacion_samba/" class="md-nav__link">
         
   
   
@@ -878,37 +878,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuración Samba desde Ubuntu Desktop
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../samba/instalacion_samba2/" class="md-nav__link">
         
   
   
@@ -924,114 +897,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instalación de paquetes para Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creación de usuario de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creación de la carpeta y permisos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Añadir al grupo sambashare
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reinicio-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reinicio del sistema
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compartición de la carpeta de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Windows
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1137,8 +1002,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1147,13 +1014,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -1174,7 +1039,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1192,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/instalacion_configuracion_dominio_ad/" class="md-nav__link">
+      <a href="../instalacion_configuracion_dominio_ad/" class="md-nav__link">
         
   
   
@@ -1220,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/gestionar_usuarios_grupos_uo/" class="md-nav__link">
+      <a href="../gestionar_usuarios_grupos_uo/" class="md-nav__link">
         
   
   
@@ -1245,10 +1110,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../wserver/perfiles_moviles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perfiles móviles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1264,6 +1156,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-la-unidad-organizativa-y-sus-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición de la unidad organizativa y sus elementos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-perfil-movil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del perfil móvil
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asignacion-del-perfil-a-los-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asignación del perfil a los usuarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1276,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wserver/directivas_grupo/" class="md-nav__link">
+      <a href="../directivas_grupo/" class="md-nav__link">
         
   
   
@@ -1454,10 +1399,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-paquetes-para-samba" class="md-nav__link">
+  <a href="#definicion-de-la-unidad-organizativa-y-sus-elementos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Instalación de paquetes para Samba
+        Definición de la unidad organizativa y sus elementos
       
     </span>
   </a>
@@ -1465,10 +1410,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-usuario-de-samba" class="md-nav__link">
+  <a href="#creacion-del-perfil-movil" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de usuario de Samba
+        Creación del perfil móvil
       
     </span>
   </a>
@@ -1476,65 +1421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-carpeta-y-permisos" class="md-nav__link">
+  <a href="#asignacion-del-perfil-a-los-usuarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creación de la carpeta y permisos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anadir-al-grupo-sambashare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Añadir al grupo sambashare
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reinicio-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reinicio del sistema
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparticion-de-la-carpeta-de-samba" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compartición de la carpeta de Samba
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Linux
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conexion-desde-una-maquina-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conexión desde una máquina Windows
+        Asignación del perfil a los usuarios
       
     </span>
   </a>
@@ -1558,36 +1448,24 @@
 
 
 
-<h1 id="instalacion-y-configuracion-de-samba-desde-ubuntu-desktop">Instalación y configuración de Samba desde Ubuntu Desktop<a class="headerlink" href="#instalacion-y-configuracion-de-samba-desde-ubuntu-desktop" title="Permanent link">&para;</a></h1>
-<h2 id="instalacion-de-paquetes-para-samba">Instalación de paquetes para Samba<a class="headerlink" href="#instalacion-de-paquetes-para-samba" title="Permanent link">&para;</a></h2>
-<p>En el servidor Samba se instala gráficamente</p>
-<h2 id="creacion-de-usuario-de-samba">Creación de usuario de Samba<a class="headerlink" href="#creacion-de-usuario-de-samba" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo smbpasswd -a acabello
-sudo smbpasswd -e acabello
-</code></pre></div>
-
-<h2 id="creacion-de-la-carpeta-y-permisos">Creación de la carpeta y permisos<a class="headerlink" href="#creacion-de-la-carpeta-y-permisos" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo mkdir -p /aguilar-dktp
-sudo chown acabello:sambashare -R /aguilar-dktp
-</code></pre></div>
-
-<h2 id="anadir-al-grupo-sambashare">Añadir al grupo sambashare<a class="headerlink" href="#anadir-al-grupo-sambashare" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo usermod -aG sambashare acabello
-</code></pre></div>
-
-<h2 id="reinicio-del-sistema">Reinicio del sistema<a class="headerlink" href="#reinicio-del-sistema" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>sudo reboot
-</code></pre></div>
-
-<h2 id="comparticion-de-la-carpeta-de-samba">Compartición de la carpeta de Samba<a class="headerlink" href="#comparticion-de-la-carpeta-de-samba" title="Permanent link">&para;</a></h2>
-<p><img alt="Compartición de carpeta" src="../../../assests/images/samba_parte2_comparticion" />
-Posteriormente añadimos los permisos automáticamente</p>
-<h2 id="conexion-desde-una-maquina-linux">Conexión desde una máquina Linux<a class="headerlink" href="#conexion-desde-una-maquina-linux" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>smbclient //192.168.104.11/aguilar-dktp
-</code></pre></div>
-
-<h2 id="conexion-desde-una-maquina-windows">Conexión desde una máquina Windows<a class="headerlink" href="#conexion-desde-una-maquina-windows" title="Permanent link">&para;</a></h2>
-<p><img alt="Conexión desde Windows" src="../../../assests/images/samba_parte2_conexion_w10.png" /></p>
+<h1 id="configuracion-de-perfiles-moviles">Configuración de perfiles móviles<a class="headerlink" href="#configuracion-de-perfiles-moviles" title="Permanent link">&para;</a></h1>
+<h2 id="definicion-de-la-unidad-organizativa-y-sus-elementos">Definición de la unidad organizativa y sus elementos<a class="headerlink" href="#definicion-de-la-unidad-organizativa-y-sus-elementos" title="Permanent link">&para;</a></h2>
+<p>Como ya se ha visto anteriormente, se define una unidad organizativa con sus elementos para realizar la configuración de los perfiles móviles. A continuación, se muestra el resultado de la estructura que se va a seguir.
+<img alt="UO ejercicio" src="../../../assests/images/aso/ud6/act4/uo_ejercicio.png" /></p>
+<h2 id="creacion-del-perfil-movil">Creación del perfil móvil<a class="headerlink" href="#creacion-del-perfil-movil" title="Permanent link">&para;</a></h2>
+<p>En primer lugar se debe crear un carpeta destino donde se guardará el contenido de los perfiles. En este caso particular se ha elegido E:\Perfiles
+<img alt="Carpeta perfiles" src="../../../assests/images/aso/ud6/act4/carpeta_perfiles.png" />
+Una vez creada la carpeta, se deberá compartir con el grupo al que pertenecen los usuarios. Botón derecho en la carpeta &gt; Propiedades &gt; Compartir
+<img alt="Compartir perfiles" src="../../../assests/images/aso/ud6/act4/compartir_1.png" />
+<img alt="Compartir perfiles" src="../../../assests/images/aso/ud6/act4/compartir_2.png" />
+<img alt="Compartir perfiles" src="../../../assests/images/aso/ud6/act4/compartir_3.png" />
+<img alt="Compartir perfiles" src="../../../assests/images/aso/ud6/act4/compartir_4.png" />
+<img alt="Compartir perfiles" src="../../../assests/images/aso/ud6/act4/compartir_5.png" /></p>
+<h2 id="asignacion-del-perfil-a-los-usuarios">Asignación del perfil a los usuarios<a class="headerlink" href="#asignacion-del-perfil-a-los-usuarios" title="Permanent link">&para;</a></h2>
+<p>Una vez creado el perfil, se debe asignar a los usuarios. Botón derecho &gt; Propiedades &gt; Perfil
+IMPORTANTE: %USERNAME%
+<img alt="Asignación Perfil 1" src="../../../assests/images/aso/ud6/act4/asignacion_perfil_1.png" />
+<img alt="Asignación Perfil 2" src="../../../assests/images/aso/ud6/act4/asignacion_perfil_2.png" /></p>
 
 
 
