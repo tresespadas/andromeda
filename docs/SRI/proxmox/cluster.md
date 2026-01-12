@@ -48,7 +48,7 @@ Máquina Proxmox (nodo) > Ceph > Install Ceph
 ![Asignación Red Ceph](../../assests/images/instalacion_ceph2.png)
 ### Creación de los monitores
 Máquina Proxmox principal (nodo) > Ceph > Monitor > Create
-![Monitor Ceph](../../assests/images/monitor_ceph.png.png)
+![Monitor Ceph](../../assests/images/monitor_ceph.png)
 ### Creación de los OSD
 Máquina Proxmox principal (nodo) > Ceph > OSD > Create
 Importante: Realizar esta opción en cada nodo
