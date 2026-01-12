@@ -1158,34 +1158,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Promover servidor a controlador de dominio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nota-contrasena-dsrm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NOTA: Contraseña DSRM:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nota-script-de-powershell-de-instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NOTA: Script de PowerShell de instalación
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1205,17 +1177,6 @@
     <span class="md-ellipsis">
       
         Antes de continuar con el siguiente paso, se debe crear una unidad organizativa y un usuario (al menos)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-el-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobación el servidor
       
     </span>
   </a>
@@ -1434,34 +1395,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Promover servidor a controlador de dominio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nota-contrasena-dsrm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NOTA: Contraseña DSRM:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nota-script-de-powershell-de-instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NOTA: Script de PowerShell de instalación
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1481,17 +1414,6 @@
     <span class="md-ellipsis">
       
         Antes de continuar con el siguiente paso, se debe crear una unidad organizativa y un usuario (al menos)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-el-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobación el servidor
       
     </span>
   </a>
@@ -1523,7 +1445,7 @@
 <h1 id="instalacion-y-configuracion-de-un-dominio-basico-ad-con-windows-server-2019">Instalación y configuración de un dominio básico AD con Windows Server 2019<a class="headerlink" href="#instalacion-y-configuracion-de-un-dominio-basico-ad-con-windows-server-2019" title="Permanent link">&para;</a></h1>
 <h2 id="red-lan-del-servidor">Red LAN del servidor<a class="headerlink" href="#red-lan-del-servidor" title="Permanent link">&para;</a></h2>
 <p>Para la posterior unión del cliente al servidor se debe modificar el adaptador de red destinado a LAN.
-<img alt="Red LAN del servidor" src="../../assests/images/aso/ud6/act1/adaptador_red_servidor_wserver_lan.png.png" /></p>
+<img alt="Red LAN del servidor" src="../../../assests/images/aso/ud6/act1/adaptador_red_servidor_wserver_lan.png" /></p>
 <h2 id="cambio-de-nombre-del-servidor">Cambio de nombre del servidor<a class="headerlink" href="#cambio-de-nombre-del-servidor" title="Permanent link">&para;</a></h2>
 <p>A continuación, se muestra el cambio de nombre del servidor. Requiere de un reinicio posterior.
 <img alt="Cambio de nombre del servidor" src="../../../assests/images/aso/ud6/act1/cambio_nombre_server.png" /></p>
@@ -1564,9 +1486,11 @@ Administrador de discos &gt; Botón derecho para inicializar el disco &gt; Forma
 <img alt="Reinicio" src="../../../assests/images/aso/ud6/act1/reinicio.png" />
 <img alt="Comprobación de AD" src="../../../assests/images/aso/ud6/act1/comprobacion_final_ad_ds.png" />
 <img alt="Comprobación de AD 2" src="../../../assests/images/aso/ud6/act1/comprobacion_final_ad_ds_2.png" /></p>
-<h3 id="nota-contrasena-dsrm">NOTA: Contraseña DSRM:<a class="headerlink" href="#nota-contrasena-dsrm" title="Permanent link">&para;</a></h3>
-<p>WindowsServer2019!$</p>
-<h3 id="nota-script-de-powershell-de-instalacion">NOTA: Script de PowerShell de instalación<a class="headerlink" href="#nota-script-de-powershell-de-instalacion" title="Permanent link">&para;</a></h3>
+<p>NOTA: Contraseña DSRM:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">WindowsServer2019</span><span class="o">!</span><span class="p">$</span>
+</code></pre></div>
+
+<p>NOTA: Script de PowerShell de instalación</p>
 <div class="codehilite"><pre><span></span><code><span class="c">#</span>
 <span class="c"># Script de Windows PowerShell para implementación de AD DS</span>
 <span class="c">#</span>
@@ -1602,8 +1526,8 @@ Administrador de discos &gt; Botón derecho para inicializar el disco &gt; Forma
 <p>Después de reiniciar...
 <img alt="Iniciar sesión" src="../../../assests/images/aso/ud6/act1/iniciando_sesion_dominio.png" />
 <img alt="Iniciar sesión 2" src="../../../assests/images/aso/ud6/act1/iniciando_sesion_dominio_2.png" /></p>
-<h3 id="comprobacion-el-servidor">Comprobación el servidor<a class="headerlink" href="#comprobacion-el-servidor" title="Permanent link">&para;</a></h3>
-<p><img alt="Comprobación en el servidor" src="../../../assests/images/aso/ud6/act1/comprobacion_servidor_equipo_cliente.png" /></p>
+<p>Comprobación el servidor
+<img alt="Comprobación en el servidor" src="../../../assests/images/aso/ud6/act1/comprobacion_servidor_equipo_cliente.png" /></p>
 
 
 
