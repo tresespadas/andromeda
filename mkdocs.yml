@@ -44,6 +44,8 @@ nav:
       - Windows Server:
         - Instalación y configuración AD: ASO/wserver/instalacion_configuracion_dominio_ad.md
         - Usuarios, equipos, grupos y UOs: ASO/wserver/gestionar_usuarios_grupos_uo.md
+        - Perfiles móviles: ASO/wserver/perfiles_moviles.md
+        - Directivas de grupo: ASO/wserver/directivas_grupo.md
   - Proyecto:
       - Fase 1: Proyecto/fase1.md
       - Fase 2: Proyecto/fase2.md
